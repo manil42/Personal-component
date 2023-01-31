@@ -39,36 +39,36 @@ function useOnClickOutside(
   }, [ref, handler]);
 }
 
-export const Dropdown = (props: DropdownProps) => {
+export const Dropdown = ({size = 'medium',  handleChange, backgroundColor, color, option, hoverBackgroundColor, openParentColor}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [value, setValue] = useState<OptionTypes>();
   const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, () => setIsOpen(false));
 
   useEffect(() => {
-    setValue(props.option[0]);
+    setValue(option[0]);
   }, []);
 
   const handleValueChange = (selectedValue: OptionTypes) => {
     setValue(selectedValue);
-    props.handleChange(selectedValue);
+   const fljasdkfj=  handleChange(selectedValue);
     setIsOpen(false);
   };
 
   return (
     <StyledDropdown
-      backgroundColor={props.backgroundColor ? props.backgroundColor : "#211d26"}
-      color={props.color ? props.color : "#f9f9f9"}
+      backgroundColor={backgroundColor ? backgroundColor : "#211d26"}
+      color={color ? color : "#f9f9f9"}
       hoverBackgroundColor={
-        props.hoverBackgroundColor ? props.hoverBackgroundColor : "#2d2834"
+        hoverBackgroundColor ? hoverBackgroundColor : "#2d2834"
       }
       openParentColor = {
-        props.openParentColor ? props.openParentColor : "#712ae0"
+        openParentColor ? openParentColor : "#712ae0"
       }
     >
       <div
         ref={ref}
-        className={`dropdown ${props.size ? `dropdown--${props.size}` : ""} ${
+        className={`dropdown dropdown--${size} ${
           isOpen ? "open" : ""
         }`}
       >
@@ -78,7 +78,7 @@ export const Dropdown = (props: DropdownProps) => {
           <Icon>{isOpen ? "close" : "expand_more"}</Icon>
         </button>
         <div className="menu">
-          {props.option.map((item, index) => {
+          {option.map((item, index) => {
             return (
               <button key={index} onClick={() => handleValueChange(item)}>
                 {item.avatar && <Icon>{item.avatar}</Icon>}

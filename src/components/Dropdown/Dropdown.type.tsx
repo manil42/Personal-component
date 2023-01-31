@@ -1,7 +1,7 @@
 export interface DropdownProps {
     option: OptionTypes[],
     handleChange: (e:any)=>void;
-    size?: 'small' | 'medium' | 'large',
+    size: 'small' | 'medium' | 'large',
     backgroundColor?: string,
     color?:string
     hoverBackgroundColor?:string,
@@ -13,7 +13,6 @@ export interface OptionTypes {
     name:string,
     value: string,
     avatar?:string,
-    
 }
 
    // /**

@@ -8,8 +8,8 @@ import "./App.css";
 /* The following line can be included in your src/index.js or App.js file */
 
 // import './App.scss';
-import { Dropdown } from "./components/dropdown";
-import { OptionTypes } from "./components/dropdown";
+import { Dropdown } from "components/Dropdown";
+import { OptionTypes } from "components/Dropdown";
 import "material-symbols";
 
 function App() {
@@ -43,7 +43,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {options && <Dropdown option={options} handleChange={updateValue} />}
+      {options && <Dropdown size="medium" openParentColor="grey" option={options} handleChange={updateValue} backgroundColor="red" />}
     </div>
   );
 }
