@@ -19,31 +19,39 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
   <i className="material-symbols-outlined">{children}</i>
 );
 
-function useOnClickOutside(
-  ref: RefObject<HTMLDivElement>,
-  handler: MouseEventHandler<HTMLButtonElement>
-) {
-  useEffect(() => {
-    const listener = (event: any) => {
-      if (!ref.current || ref.current.contains(event.target)) {
-        return;
-      }
-      handler(event);
-    };
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
-  }, [ref, handler]);
-}
+// function useOnClickOutside(
+//   ref: RefObject<HTMLDivElement>,
+//   handler: MouseEventHandler<HTMLButtonElement>
+// ) {
+//   useEffect(() => {
+//     const listener = (event: any) => {
+//       if (!ref.current || ref.current.contains(event.target)) {
+//         return;
+//       }
+//       handler(event);
+//     };
+//     document.addEventListener("mousedown", listener);
+//     document.addEventListener("touchstart", listener);
+//     return () => {
+//       document.removeEventListener("mousedown", listener);
+//       document.removeEventListener("touchstart", listener);
+//     };
+//   }, [ref, handler]);
+// }
 
-export const Dropdown = ({size = 'medium',  handleChange, backgroundColor, color, option, hoverBackgroundColor, openParentColor}: DropdownProps) => {
+export const Dropdown = ({
+  size = "medium",
+  handleChange,
+  backgroundColor,
+  color,
+  option,
+  hoverBackgroundColor,
+  openParentColor,
+}: DropdownProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [value, setValue] = useState<OptionTypes>();
   const ref = useRef<HTMLDivElement>(null);
-  useOnClickOutside(ref, () => setIsOpen(false));
+  // useOnClickOutside(ref, () => setIsOpen(false));
 
   useEffect(() => {
     setValue(option[0]);
@@ -51,7 +59,7 @@ export const Dropdown = ({size = 'medium',  handleChange, backgroundColor, color
 
   const handleValueChange = (selectedValue: OptionTypes) => {
     setValue(selectedValue);
-   const fljasdkfj=  handleChange(selectedValue);
+    const fljasdkfj = handleChange(selectedValue);
     setIsOpen(false);
   };
 
@@ -62,15 +70,11 @@ export const Dropdown = ({size = 'medium',  handleChange, backgroundColor, color
       hoverBackgroundColor={
         hoverBackgroundColor ? hoverBackgroundColor : "#2d2834"
       }
-      openParentColor = {
-        openParentColor ? openParentColor : "#712ae0"
-      }
+      openParentColor={openParentColor ? openParentColor : "#712ae0"}
     >
       <div
         ref={ref}
-        className={`dropdown dropdown--${size} ${
-          isOpen ? "open" : ""
-        }`}
+        className={`dropdown dropdown--${size} ${isOpen ? "open" : ""}`}
       >
         <button onClick={() => setIsOpen(!isOpen)}>
           {value && value.avatar && <Icon>{value && value.avatar}</Icon>}

@@ -1,10 +1,8 @@
 export interface ButtonProps {
-  option: OptionTypes[];
-  size?: "small" | "medium" | "large";
-}
-
-export interface OptionTypes {
-  id: number;
-  name: string;
-  avatar?: string;
+  icon?: string;
+  label?: string;
+  isdisabled?: boolean;
+  varient?: "text" | "contained" | "outlined";
+  theme?: string;
+  shape?:"round"|"square";
 }

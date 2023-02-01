@@ -1,0 +1,57 @@
+$primary-color: #2979ff;
+$primary-light-color: #c3d8fc;
+$primary-hover-color: #5393ff;
+
+$danger-color: #f44336;
+$danger-hover-color: #f6685e;
+$white-color: #f3f1f1;
+$black-color: #1b1a1a;
+.button-component {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  // margin: 0;
+  text-align: center;
+
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  height: 30px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  line-height: 15px;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  &.button-contained {
+    border-style: none;
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  &.button-text {
+    border-style: none;
+    background-color: white;
+    color: $primary-color;
+  }
+  &.button-outlined {
+    color: $primary-color;
+    border-color: $primary-color;
+    border-width: 1px;
+    background-color: white;
+  }
+}
+
+.button-contained:hover,
+.button-contained:focus {
+  background-color: $primary-hover-color;
+}
+.button-text:hover,
+.button-text:focus {
+  background: $primary-light-color;
+}
+
+.button-outlined:hover,
+.button-outlined:focus {
+  background-color: $primary-light-color;
+}
