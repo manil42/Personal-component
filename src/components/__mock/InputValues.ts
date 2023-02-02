@@ -51,6 +51,7 @@ export const InputFieldWithIconValues: InputProps = {
   placeholder: "Enter Text",
   size: "medium",
   value: "Hello World",
-  icon:"person"
+  icon:"person",
+  iconSize:"medium"
 }
 
