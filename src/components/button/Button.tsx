@@ -1,25 +1,31 @@
-import { spawn } from "child_process";
-import React, { FC, PropsWithChildren, useEffect, useState } from "react";
+import React, { FC, PropsWithChildren } from "react";
 import { ButtonProps } from "./Button.type";
 
 const Icon: FC<PropsWithChildren> = ({ children }) => (
-  <i className="material-symbols-outlined button-icons bil-icons ">{children}</i>
+  <i className="material-symbols-outlined button-icons bil-icons ">
+    {children}
+  </i>
 );
 
 const Button = ({
   icon,
   label,
   varient = "contained",
-  isdisabled,
+  isDisabled,
   shape,
+  theme,
   size = "small",
+  handleClick,
 }: ButtonProps) => {
   return (
     <button
+      role="button"
       className={`button-component button-${varient} button-${shape} button-${size} ${
         icon && label ? `button-icon-label` : ``
-      }`}
-      disabled={isdisabled}
+      }  button-color-${theme} ${isDisabled === true ? `button-disabled` : ``}`}
+      onClick={handleClick}
+      aria-label="this will take you to button"
+      disabled={isDisabled ? true : false}
     >
       {icon && <Icon>{icon ? icon : ""}</Icon>}
       {label && (
