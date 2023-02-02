@@ -4,5 +4,6 @@ export interface ButtonProps {
   isdisabled?: boolean;
   varient?: "text" | "contained" | "outlined";
   theme?: string;
-  shape?:"round"|"square";
+  shape?: "circle" | "square";
+  size?: "small" | "medium" | "large";
 }

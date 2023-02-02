@@ -9,7 +9,7 @@ import {
   useState,
 } from "react";
 import { DropdownProps, OptionTypes } from "./Dropdown.type";
-import "../../assets/styles/index.scss";
+import "../../assets/styles/components/index.scss";
 
 // import "./styles.css";
 import "material-symbols";
