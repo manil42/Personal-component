@@ -1,5 +1,5 @@
 //import { DropdownProps } from "../dropdown";
-import { DropdownProps } from "components/dropdown";
+import { DropdownProps } from "../Dropdown";
 
 export const DropdownValueWithAvatar: DropdownProps = {
   option: [
@@ -10,13 +10,13 @@ export const DropdownValueWithAvatar: DropdownProps = {
       avatar: "people",
     },
     {
-      id: 1,
+      id: 2,
       name: "Settings",
       value: "Settings",
       avatar: "settings",
     },
     {
-      id: 1,
+      id: 3,
       name: "Account",
       value: "Account",
       avatar: "lock",
@@ -35,12 +35,12 @@ export const DropdownValueWithOutAvatar: DropdownProps = {
       value: "Profile",
     },
     {
-      id: 1,
+      id: 2,
       name: "Settings",
       value: "Settings",
     },
     {
-      id: 1,
+      id: 3,
       name: "Account",
       value: "Account",
     },

@@ -59,7 +59,7 @@ export const Dropdown = ({
 
   const handleValueChange = (selectedValue: OptionTypes) => {
     setValue(selectedValue);
-    const fljasdkfj = handleChange(selectedValue);
+    handleChange(selectedValue);
     setIsOpen(false);
   };
 

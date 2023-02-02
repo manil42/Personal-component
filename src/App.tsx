@@ -8,11 +8,10 @@ import "./App.css";
 /* The following line can be included in your src/index.js or App.js file */
 
 // import './App.scss';
-import { Dropdown } from "./components/dropdown";
-import { OptionTypes } from "./components/dropdown";
+import { Dropdown } from "./components/Dropdown";
+import { OptionTypes } from "./components/Dropdown";
 // import Button from "./components/Button/Button";
 
-import Button from "./components/Button/Button";
 
 function App() {
   const [options, setOptions] = useState<OptionTypes[]>();

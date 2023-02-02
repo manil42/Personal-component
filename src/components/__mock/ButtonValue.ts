@@ -1,4 +1,4 @@
-import { ButtonProps } from "components/Button";
+import { ButtonProps } from "../button";
 
 export const ButtonLabel: ButtonProps = {
   label: "button",
