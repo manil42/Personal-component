@@ -1,40 +1,117 @@
 @import "../variables/variable.scss";
 
+.button-disabled {
+  background-color: none !important;
+}
+
 .button-component {
   box-sizing: border-box;
-  cursor: pointer;
   display: inline-block;
+  cursor: pointer;
   list-style: none;
-  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
-    sans-serif;
   display: flex;
   align-items: center;
   height: 30px;
-  padding: 8px 12px;
+  padding: 12px 14px;
   border-radius: 6px;
   line-height: 15px;
-
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   position: relative;
+
+  &.button-disabled {
+    cursor: not-allowed;
+  }
+
+  // ......theme & varient...........
 
   &.button-contained {
     border-style: none;
     background-color: $primary-color;
     color: $white-color;
+
+    &.button-color-secondary {
+      background-color: $secondary-color;
+
+      &.button-contained:hover,
+      &.button-contained:focus {
+        background-color: transparentize($secondary-color, $amount: 0.25);
+      }
+    }
+    &.button-color-sucess {
+      background-color: $sucess-color;
+      &.button-contained:hover,
+      &.button-contained:focus {
+        background-color: transparentize($sucess-color, $amount: 0.25);
+      }
+    }
+    &.button-color-danger {
+      background-color: $danger-color;
+      &.button-contained:hover,
+      &.button-contained:focus {
+        background-color: transparentize($danger-color, $amount: 0.25);
+      }
+    }
   }
   &.button-text {
     border-style: none;
     background-color: white;
     color: $primary-color;
+
+    &.button-color-secondary {
+      color: $secondary-color;
+      &.button-text:hover,
+      &.button-text:focus {
+        background-color: transparentize($secondary-color, $amount: 0.75);
+      }
+    }
+    &.button-color-sucess {
+      color: $sucess-color;
+      &.button-text:hover,
+      &.button-text:focus {
+        background-color: transparentize($sucess-color, $amount: 0.75);
+      }
+    }
+    &.button-color-danger {
+      color: $danger-color;
+      &.button-text:hover,
+      &.button-text:focus {
+        background-color: transparentize($danger-color, $amount: 0.75);
+      }
+    }
   }
   &.button-outlined {
     color: $primary-color;
     border-color: $primary-color;
     border-width: 1px;
     background-color: white;
-  }
 
+    &.button-color-secondary {
+      color: $secondary-color;
+      border-color: $secondary-color;
+      &.button-outlined:hover,
+      &.button-outlined:focus {
+        background-color: transparentize($secondary-color, $amount: 0.75);
+      }
+    }
+    &.button-color-sucess {
+      color: $sucess-color;
+      border-color: $sucess-color;
+      &.button-outlined:hover,
+      &.button-outlined:focus {
+        background-color: transparentize($sucess-color, $amount: 0.75);
+      }
+    }
+    &.button-color-danger {
+      color: $danger-color;
+      border-color: $danger-color;
+      &.button-outlined:hover,
+      &.button-outlined:focus {
+        background-color: transparentize($danger-color, $amount: 0.75);
+      }
+    }
+  }
+  //...................size & shape................
   &.button-square {
     border-radius: 0% !important;
   }
@@ -77,7 +154,7 @@
 
   &.button-medium {
     height: 35px;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 15px;
 
     &.button-icon-label {
@@ -94,12 +171,12 @@
       line-height: 10px;
 
       .button-span {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 32px;
       }
 
       .button-icons {
-        font-size: 20px;
+        font-size: 18px;
         line-height: 32px;
       }
       &.button-icon-label {
@@ -110,13 +187,13 @@
     }
 
     .button-icons {
-      font-size: 20px;
+      font-size: 18px;
       line-height: 19px;
     }
   }
   &.button-large {
     height: 40px;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 17px;
 
     &.button-icon-label {
@@ -132,12 +209,12 @@
       height: 45px;
 
       &.button-icons {
-        font-size: 24px;
+        font-size: 20px;
         line-height: 19px;
       }
     }
     .button-icons {
-      font-size: 24px;
+      font-size: 20px;
       line-height: 19px;
     }
   }

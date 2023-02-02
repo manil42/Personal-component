@@ -5,6 +5,7 @@ import {
   ButtonIcon,
   ButtonLabel,
   ButtonLabelIcon,
+  DisableButtonArgs,
 } from "components/__mock/ButtonValue";
 
 export default {
@@ -32,4 +33,10 @@ export const ButtonWithLabelIcon = Template.bind({});
 
 ButtonWithLabelIcon.args = {
   ...ButtonLabelIcon,
+};
+
+export const DisableButton = Template.bind({});
+
+DisableButton.args = {
+  ...DisableButtonArgs,
 };
