@@ -1,4 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
+import "../../assets/styles/components/index.scss";
 import Radio from "./Radio";
 
 export default {

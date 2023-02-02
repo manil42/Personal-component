@@ -3,10 +3,10 @@ import { RadioProps } from "./Radio.type";
 
 const Radio = ({ label, size }: RadioProps) => {
   return (
-    <label>
-      <input type="radio" name="radio" />
-      {label}
-    </label>
+    <div className="radio-component">
+      <input type="radio" name="radio" className="radio-input" />
+      <label className="radio-label"> {label} </label>
+    </div>
   );
 };
 
