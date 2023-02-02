@@ -51,7 +51,7 @@ export const Dropdown = ({size = 'medium',  handleChange, backgroundColor, color
 
   const handleValueChange = (selectedValue: OptionTypes) => {
     setValue(selectedValue);
-   const fljasdkfj=  handleChange(selectedValue);
+    handleChange(selectedValue);
     setIsOpen(false);
   };
 

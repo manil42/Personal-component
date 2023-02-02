@@ -9,19 +9,18 @@ export const DropdownValueWithAvatar:DropdownProps = {
       avatar: "people",
     },
     {
-      id: 1,
+      id: 2,
       name: "Settings",
       value: "Settings",
       avatar: "settings",
     },
     {
-      id: 1,
+      id: 3,
       name: "Account",
       value: "Account",
       avatar: "lock",
     },
   ],
-
   handleChange:(e:any)=>{},
   size:'medium'
 
@@ -35,12 +34,12 @@ export const DropdownValueWithOutAvatar:DropdownProps = {
       value: "Profile",
     },
     {
-      id: 1,
+      id: 2,
       name: "Settings",
       value: "Settings",
     },
     {
-      id: 1,
+      id: 3,
       name: "Account",
       value: "Account",
     },

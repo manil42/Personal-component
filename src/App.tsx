@@ -10,6 +10,7 @@ import "./App.css";
 // import './App.scss';
 import { Dropdown } from "components/Dropdown";
 import { OptionTypes } from "components/Dropdown";
+import Input from "components/input/Input";
 import "material-symbols";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
   return (
     <div className="App">
       {options && <Dropdown size="medium" openParentColor="grey" option={options} handleChange={updateValue} backgroundColor="red" />}
+      <Input size="small" type="text" isError  />
     </div>
   );
 }
