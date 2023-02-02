@@ -1,6 +1,7 @@
-import { DropdownProps } from "../Dropdown";
+//import { DropdownProps } from "../dropdown";
+import { DropdownProps } from "components/dropdown";
 
-export const DropdownValueWithAvatar:DropdownProps = {
+export const DropdownValueWithAvatar: DropdownProps = {
   option: [
     {
       id: 1,
@@ -22,12 +23,11 @@ export const DropdownValueWithAvatar:DropdownProps = {
     },
   ],
 
-  handleChange:(e:any)=>{},
-  size:'medium'
-
+  handleChange: (e: any) => {},
+  size: "medium",
 };
 
-export const DropdownValueWithOutAvatar:DropdownProps = {
+export const DropdownValueWithOutAvatar: DropdownProps = {
   option: [
     {
       id: 1,
@@ -46,7 +46,6 @@ export const DropdownValueWithOutAvatar:DropdownProps = {
     },
   ],
 
-  handleChange:(e:any)=>{},
-  size:'medium'
+  handleChange: (e: any) => {},
+  size: "medium",
 };
-

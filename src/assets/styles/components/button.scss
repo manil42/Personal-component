@@ -1,0 +1,158 @@
+@import "../variables/variable.scss";
+
+.button-component {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  line-height: 15px;
+
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+
+  &.button-contained {
+    border-style: none;
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  &.button-text {
+    border-style: none;
+    background-color: white;
+    color: $primary-color;
+  }
+  &.button-outlined {
+    color: $primary-color;
+    border-color: $primary-color;
+    border-width: 1px;
+    background-color: white;
+  }
+
+  &.button-square {
+    border-radius: 0% !important;
+  }
+
+  &.button-circle {
+    border-radius: 50%;
+  }
+
+  &.button-small {
+    &.button-icon-label {
+      gap: 5px;
+      .bil-span {
+        line-height: 15px;
+      }
+    }
+    &.button-circle {
+      border-radius: 15px;
+      padding: 0px 6px;
+      line-height: 10px;
+
+      &.button-icon-label {
+        .bil-span {
+          line-height: 28px;
+        }
+      }
+      .button-span {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      .button-icons {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+    .button-icons {
+      font-size: 18px;
+      line-height: 15px;
+    }
+  }
+
+  &.button-medium {
+    height: 35px;
+    font-size: 20px;
+    line-height: 15px;
+
+    &.button-icon-label {
+      gap: 5px;
+      .bil-span {
+        line-height: 18px;
+      }
+    }
+
+    &.button-circle {
+      border-radius: 20px;
+      padding: 0px 8px;
+      height: 35px;
+      line-height: 10px;
+
+      .button-span {
+        font-size: 20px;
+        line-height: 32px;
+      }
+
+      .button-icons {
+        font-size: 20px;
+        line-height: 32px;
+      }
+      &.button-icon-label {
+        .bil-span {
+          line-height: 32px;
+        }
+      }
+    }
+
+    .button-icons {
+      font-size: 20px;
+      line-height: 19px;
+    }
+  }
+  &.button-large {
+    height: 40px;
+    font-size: 24px;
+    line-height: 17px;
+
+    &.button-icon-label {
+      gap: 5px;
+      .bil-span {
+        line-height: 18px;
+      }
+    }
+
+    &.button-circle {
+      border-radius: 27px;
+      padding: 11px 11px;
+      height: 45px;
+
+      &.button-icons {
+        font-size: 24px;
+        line-height: 19px;
+      }
+    }
+    .button-icons {
+      font-size: 24px;
+      line-height: 19px;
+    }
+  }
+}
+
+.button-contained:hover,
+.button-contained:focus {
+  background-color: transparentize($primary-color, $amount: 0.25);
+}
+.button-text:hover,
+.button-text:focus {
+  background: transparentize($primary-color, $amount: 0.75);
+}
+
+.button-outlined:hover,
+.button-outlined:focus {
+  background-color: transparentize($primary-color, $amount: 0.75);
+}
