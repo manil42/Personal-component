@@ -1,9 +1,10 @@
 export interface ButtonProps {
   icon?: string;
   label?: string;
-  isdisabled?: boolean;
+  isDisabled?: boolean;
   varient?: "text" | "contained" | "outlined";
-  theme?: string;
-  shape?: "circle" | "square";
+  theme?: "primary" | "secondary" | "sucess" | "danger";
+  shape?: "circle" | "square" | "rounded";
   size?: "small" | "medium" | "large";
+  handleClick?: (e: any) => void;
 }
