@@ -3,7 +3,6 @@ import { ButtonProps } from "../button";
 export const ButtonLabel: ButtonProps = {
   label: "button",
   varient: "contained",
-  isdisabled: true,
 };
 export const ButtonIcon: ButtonProps = {
   icon: "person",
@@ -15,4 +14,11 @@ export const ButtonLabelIcon: ButtonProps = {
   label: "Person",
   icon: "person",
   varient: "contained",
+};
+
+export const DisableButtonArgs: ButtonProps = {
+  label: "Person",
+  icon: "person",
+  varient: "contained",
+  isDisabled: true,
 };
