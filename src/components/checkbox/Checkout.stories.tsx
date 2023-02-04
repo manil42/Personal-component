@@ -1,18 +1,47 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
-import { CheckboxValues } from "components/__mock/CheckboxValues";
+import {
+  CheckboxDisableValues,
+  CheckboxWithLabelValues,
+  CheckboxSizeValues,
+  CheckboxErrorValues,
+  CheckboxErrorMessageValues,
+} from "components/__mock/CheckboxValues";
 import Checkbox from "./Checkbox";
 
 export default {
-    title:"components/Checkout",
-    component: Checkbox
-} as ComponentMeta<typeof Checkbox>
+  title: "components/Checkbox",
+  component: Checkbox,
+} as ComponentMeta<typeof Checkbox>;
 
 const Template: ComponentStory<typeof Checkbox> = (args: any) => (
-    <Checkbox {...args} />
-  );
+  <Checkbox {...args} />
+);
 
-export const DefaultCheckbox = Template.bind({})
+export const CheckboxWithLabel = Template.bind({});
 
-DefaultCheckbox.args = {
-    ...CheckboxValues
-}
+CheckboxWithLabel.args = {
+  ...CheckboxWithLabelValues,
+};
+
+export const CheckboxDisable = Template.bind({});
+
+CheckboxDisable.args = {
+  ...CheckboxDisableValues,
+};
+export const CheckboxSize = Template.bind({});
+
+CheckboxSize.args = {
+  ...CheckboxSizeValues,
+};
+
+export const CheckboxError = Template.bind({});
+
+CheckboxError.args = {
+  ...CheckboxErrorValues,
+};
+
+export const CheckboxErrorMessage = Template.bind({});
+
+CheckboxErrorMessage.args = {
+  ...CheckboxErrorMessageValues,
+};

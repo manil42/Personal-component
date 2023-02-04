@@ -1,5 +1,5 @@
 //import { DropdownProps } from "../dropdown";
-import { DropdownProps } from "../Dropdown";
+import { DropdownProps } from "components/Dropdown";
 
 export const DropdownValueWithAvatar: DropdownProps = {
   option: [

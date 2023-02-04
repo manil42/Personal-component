@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren, useState } from "react";
+import React, { FC, PropsWithChildren,  } from "react";
 import { InputProps } from "./Input.type";
 
 const Input = ({
@@ -38,7 +38,7 @@ const Input = ({
         />
       </div>
 
-      {errorMessage && <div className="error--message">{errorMessage}</div>}
+      {isError && <div className="error--message">{errorMessage}</div>}
     </div>
   );
 };

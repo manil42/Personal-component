@@ -1,4 +1,7 @@
 export interface CheckboxProps {
-    label?:string;
-    isChecked?:boolean;
+    label:string;
+    isDisabled?:boolean;
+    size?: "small" | "medium" | "large";
+    isError?: boolean;
+    errorMessage?:string;
 }
