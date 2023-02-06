@@ -44,8 +44,11 @@ function App() {
   //     },
   //   ]);
   // }, []);
+
+  // console.log(selectValue);
+
   return (
-    <div className="App">
+    <div>
       {/* {options && (
         <Dropdown
           size="medium"
@@ -56,9 +59,6 @@ function App() {
         />
       )} */}
       {/* <Button icon="person" label="person" /> */}
-
-      <Radio label="Radio" />
-      <Radio label="Hello" />
     </div>
   );
 }
