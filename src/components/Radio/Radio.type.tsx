@@ -6,6 +6,4 @@ export interface RadioProps {
   isError?: boolean;
   change?: any;
   value?: string;
-  //isSelected?: boolean;
-  // message?: string;
 }

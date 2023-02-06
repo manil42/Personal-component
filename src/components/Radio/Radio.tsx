@@ -9,15 +9,6 @@ const Radio = ({
   emsg,
   value,
 }: RadioProps) => {
-  // const [selectValue, setSelectValue] = useState("");
-
-  // const radioChangeHandler = (e: {
-  //   target: { value: React.SetStateAction<string> };
-  // }) => {
-  //   setSelectValue(e.target.value);
-  // };
-  // const target = selectValue === value;
-
   return (
     <div className={`${isError === true ? `radio--error` : ``}`}>
       <div
@@ -30,8 +21,6 @@ const Radio = ({
           name="radio"
           className="radio-input"
           disabled={isDisabled}
-          // checked={selectValue === value}
-          // onChange={radioChangeHandler}
           value={value}
           id={label}
         />
