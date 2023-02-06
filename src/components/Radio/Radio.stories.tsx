@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import "../../assets/styles/components/index.scss";
 import Radio from "./Radio";
-import { Radiolabel1, Radiolabel2 } from "components/_mock/RadioValue";
+import { Radiolabel1, Radiolabel2 } from "components/__mock/RadioValue";
 import { useState } from "react";
 
 
