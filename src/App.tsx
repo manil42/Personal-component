@@ -1,3 +1,4 @@
+import Switch from "components/switch/Switch";
 import React, { useEffect, useState } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
@@ -11,7 +12,6 @@ import "./App.css";
 import { Dropdown } from "./components/Dropdown";
 import { OptionTypes } from "./components/Dropdown";
 // import Button from "./components/Button/Button";
-
 
 function App() {
   const [options, setOptions] = useState<OptionTypes[]>();
@@ -44,7 +44,7 @@ function App() {
   }, []);
   return (
     <div className="App">
-      {options && (
+      {/* {options && (
         <Dropdown
           size="medium"
           openParentColor="grey"
@@ -52,8 +52,12 @@ function App() {
           handleChange={updateValue}
           backgroundColor="red"
         />
-      )}
+      )} */}
       {/* <Button icon="person" label="person" /> */}
+      <div style={{ margin: "24px" }}>
+        <Switch />
+      </div>
+      <Switch />
     </div>
   );
 }
