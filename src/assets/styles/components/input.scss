@@ -38,6 +38,9 @@
 
 .icon-input {
   border-left-style: none;
+  &:focus {
+    border-left-style: none;
+  }
 }
 .icon {
   border: 1px solid $black-color ;

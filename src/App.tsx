@@ -1,3 +1,4 @@
+import Switch from "components/switch/Switch";
 import React, { useEffect, useState } from "react";
 // import logo from "./logo.svg";
 import "./App.css";
@@ -46,7 +47,8 @@ function App() {
   // console.log(selectValue);
 
   return (
-    <div>
+
+    <div className="App">
       {/* {options && (
         <Dropdown
           size="medium"
@@ -57,6 +59,10 @@ function App() {
         />
       )} */}
       {/* <Button icon="person" label="person" /> */}
+      <div style={{ margin: "24px" }}>
+        <Switch />
+      </div>
+      <Switch />
     </div>
   );
 }
