@@ -6,5 +6,4 @@ export interface ButtonProps {
   theme?: "primary" | "secondary" | "sucess" | "danger";
   shape?: "circle" | "square" | "rounded";
   size?: "small" | "medium" | "large";
-  handleClick?: (e: any) => void;
 }
