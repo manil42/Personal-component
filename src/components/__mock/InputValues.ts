@@ -17,32 +17,27 @@ export const PlaceholderInputValues: InputProps = {
 export const InputSizeValues: InputProps = {
     type:"text",
     placeholder:"Enter Text",
-    size:"medium",
     handleChange:(e:any) => value = e.target.value
 
 }
 
 export const InputDisableValues: InputProps = {
   type:"text",
-  size: "medium",
   isDisabled: true,
-  value: "Hello World",
+  value: "Enter Text",
   handleChange:(e:any) => value = e.target.value
 
 }
 export const InputReadOnlyValues: InputProps = {
   type:"text",
-  size: "medium",
   isReadOnly: true,
-  value: "Hello World",
+  value: "Enter Text",
   handleChange:(e:any) => value = e.target.value
 
 }
 export const InputErrorValues: InputProps = {
   type:"text",
-  placeholder: "Enter Text",
-  size: "medium",
-  value: "Hello World",
+  value: "Enter Text",
   isError:true,
   handleChange:(e:any) => value = e.target.value
 
@@ -51,8 +46,7 @@ export const InputErrorValues: InputProps = {
 export const InputFieldWithErrorMessageValues: InputProps = {
   type:"text",
   placeholder: "Enter Text",
-  size: "medium",
-  value: "Hello World",
+  value: "Enter Text",
   isError:true,
   errorMessage:"This is a error message",
   handleChange:(e:any) => value = e.target.value
@@ -61,8 +55,6 @@ export const InputFieldWithErrorMessageValues: InputProps = {
 
 export const InputFieldWithIconValues: InputProps = {
   type:"text",
-  placeholder: "Enter Text",
-  size: "medium",
   value: "Hello World",
   icon:"person",
   iconSize:"medium",
