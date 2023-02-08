@@ -8,8 +8,8 @@ import "./App.css";
 /* The following line can be included in your src/index.js or App.js file */
 
 // import './App.scss';
-import { Dropdown } from "./components/Dropdown";
-import { OptionTypes } from "./components/Dropdown";
+import { Dropdown } from "./components/dropdown";
+import { OptionTypes } from "./components/dropdown";
 // import Button from "./components/Button/Button";
 
 
@@ -47,10 +47,8 @@ function App() {
       {options && (
         <Dropdown
           size="medium"
-          openParentColor="grey"
           option={options}
           handleChange={updateValue}
-          backgroundColor="red"
         />
       )}
       {/* <Button icon="person" label="person" /> */}

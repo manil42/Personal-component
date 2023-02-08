@@ -4,7 +4,7 @@
   border-radius: 3px;
   outline: none;
   font-size: 32px;
-  color: #555;
+  color: $black-color;
 
   &:focus {
     border: 1px solid $primary-color;
@@ -38,6 +38,9 @@
 
 .icon-input {
   border-left-style: none;
+  &:focus {
+    border-left-style: none;
+  }
 }
 .icon {
   border: 1px solid $black-color ;
