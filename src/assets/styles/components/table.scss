@@ -12,9 +12,12 @@
 
   thead {
     th {
-      background-color: #54585d;
-      color: #ffffff;
-      border: 1px solid #54585d;
+      border-bottom: 1px solid rgb(224, 224, 224);
+      padding: 16px;
+      font-weight: 500;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      font-size: 0.875rem;
+      text-align: left;
     }
   }
 
@@ -40,12 +43,12 @@
   tbody {
     tr {
       td {
-        color: #636363;
-        border: 1px solid #dddfe1;
-      }
-      td {
-        color: #636363;
-        border: 1px solid #dddfe1;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        border-bottom: 1px solid rgb(224, 224, 224);
+        padding: 15px;
+        color: rgba(0, 0, 0, 0.87);
       }
     }
   }
@@ -58,12 +61,12 @@
   tbody {
     tr:nth-child(even) {
       td {
-        background-color: #f2f2f2;
+        background-color: #f6f6f6;
       }
     }
     tr {
       td:hover {
-        background-color: #ddd;
+        background-color: #e6e6e6;
       }
     }
   }
