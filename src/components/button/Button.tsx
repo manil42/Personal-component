@@ -15,7 +15,6 @@ const Button = ({
   shape,
   theme,
   size = "small",
-  handleClick,
 }: ButtonProps) => {
   return (
     <button
@@ -23,7 +22,6 @@ const Button = ({
       className={`button-component button-${varient} button-${shape} button-${size} ${
         icon && label ? `button-icon-label` : ``
       }  button-color-${theme} ${isDisabled === true ? `button-disabled` : ``}`}
-      onClick={handleClick}
       aria-label="this will take you to button"
       disabled={isDisabled ? true : false}
     >
