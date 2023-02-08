@@ -1,5 +1,6 @@
 export interface TableProps {
-  caption?: any;
+  caption?: string;
   columns: any;
   rows: any;
+  color?: "primary" | "secondary" | "success" | "danger";
 }

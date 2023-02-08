@@ -1,0 +1,66 @@
+@import "../variables/variable.scss";
+.table-component {
+  width: 100%;
+  border-spacing: 0;
+  th {
+    padding: 15px;
+  }
+
+  thead {
+    th {
+      background-color: #54585d;
+      color: #ffffff;
+      border: 1px solid #54585d;
+    }
+  }
+
+  th {
+    &.up {
+      background-image: $up-arrow;
+    }
+    &.down {
+      background-image: $down-arrow;
+    }
+    &.default {
+      background-image: $default;
+    }
+    &.up,
+    &.down,
+    &.default {
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        color: #636363;
+        border: 1px solid #dddfe1;
+      }
+      td {
+        color: #636363;
+        border: 1px solid #dddfe1;
+      }
+    }
+  }
+
+  .td,
+  .th {
+    border-top: 1px solid $black-color;
+    padding: 8px 20px;
+  }
+  tbody {
+    tr:nth-child(even) {
+      td {
+        background-color: #f2f2f2;
+      }
+    }
+    tr {
+      td:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
