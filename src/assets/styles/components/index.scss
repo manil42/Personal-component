@@ -1,4 +1,13 @@
+@import "../variables/variable.scss";
+// @import "./button.scss";
+// @import "./dropdown.scss";
+@import "./radio.scss";
+// * {
+//   background-color: red;
+// }
 @import "./button.scss";
 @import "./dropdown.scss";
-@import "input.scss";
 @import "./table.scss";
+@import "./switch.scss";
+@import "input.scss";
+@import "checkbox.scss";
