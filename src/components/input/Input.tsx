@@ -10,7 +10,6 @@ const Input = ({
   handleChange,
   errorMessage,
   id,
-  size = "medium",
   isDisabled,
   isError,
   isReadOnly,
@@ -32,12 +31,12 @@ const Input = ({
           onChange={handleChange}
           disabled={isDisabled}
           readOnly={isReadOnly}
-          className={`input input--${size} ${
+          style={{border:'1px solid black'}}
+          className={`input ${
             isError ? "input--error" : "input"
           } ${icon && "icon-input"}`}
         />
       </div>
-
       {isError && <div className="error--message">{errorMessage}</div>}
     </div>
   );
