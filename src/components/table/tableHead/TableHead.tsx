@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TableHeadProps } from "./TableHead.type";
 
-const TableHead = ({ columns, handleSorting, color }: TableHeadProps) => {
+const TableHead = ({ columns, handleSorting }: TableHeadProps) => {
   const [sortField, setSortField] = useState<string>("");
   const [order, setOrder] = useState<string>("asc");
 
@@ -30,7 +30,7 @@ const TableHead = ({ columns, handleSorting, color }: TableHeadProps) => {
                   ? () => handleSortingChange(column.key)
                   : () => handleSorting()
               }
-              className={`${cl} th-${color}`}
+              className={`${cl} `}
             >
               {column.name ? column.name : column.key}
             </th>

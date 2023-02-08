@@ -1,7 +1,7 @@
 import React from "react";
 import { TableBodyProps } from "./TableBody.type";
 
-const TableBody = ({ columns, rows, color }: TableBodyProps) => {
+const TableBody = ({ columns, rows }: TableBodyProps) => {
   return (
     <tbody>
       {rows?.map((row: any, index: any) => {
@@ -9,7 +9,7 @@ const TableBody = ({ columns, rows, color }: TableBodyProps) => {
           <tr key={index}>
             {columns?.map((column: any) => {
               return (
-                <td key={`${column.key}_${index}`} className={`td-${color}`}>
+                <td key={`${column.key}_${index}`}>
                   {row[column.key] || "——"}
                 </td>
               );

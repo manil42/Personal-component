@@ -3,7 +3,7 @@ import TableHead from "./tableHead/TableHead";
 import TableBody from "./tableBody/TableBody";
 import { TableProps } from "./Table.type";
 
-export const Table = ({ columns, rows, caption, color }: TableProps) => {
+export const Table = ({ columns, rows, caption }: TableProps) => {
   const data = rows;
   const [sorting, setSorting] = useState<any>({ key: "", order: "" });
 
@@ -20,12 +20,12 @@ export const Table = ({ columns, rows, caption, color }: TableProps) => {
       <caption className="table-caption">{caption}</caption>
       <table className="table-component">
         <TableHead
-          {...{ columns, color }}
+          {...{ columns }}
           handleSorting={(key: string, order: string) =>
             setSorting({ key, order })
           }
         />
-        <TableBody {...{ columns, rows, color }} />
+        <TableBody {...{ columns, rows }} />
       </table>
     </>
   );
