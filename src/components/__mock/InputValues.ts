@@ -56,8 +56,7 @@ export const InputFieldWithErrorMessageValues: InputProps = {
 export const InputFieldWithIconValues: InputProps = {
   type:"text",
   value: "Hello World",
-  icon:"person",
-  iconSize:"medium",
+  icon:"people",
   handleChange:(e:any) => value = e.target.value
 
 }

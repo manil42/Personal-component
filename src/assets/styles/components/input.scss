@@ -1,20 +1,28 @@
-.input {
-  padding: 5px 15px;
-  width: 300px;
-  border-radius: 3px;
-  outline: none;
-  font-size: 16px;
-  height: 25px;
-  border: 1px solid black;
-  &:focus {
-    border: 1px solid $primary-color !important ;
-  }
-  &.input--error {
-    border: 1px solid $danger-color;
-    &:focus{
-      border: 1px solid $danger-color !important;
+.input-container {
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  align-items: center;
+
+  & .input {
+    position: relative;
+    padding: 5px 20px;
+    width: 300px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 16px;
+    height: 25px;
+    border: 1px solid black;
+    &:focus {
+      border: 1px solid $primary-color !important ;
     }
-  } 
+    &.input--error {
+      border: 1px solid $danger-color;
+      &:focus {
+        border: 1px solid $danger-color !important;
+      }
+    }
+  }
 }
 
 .error--message {
@@ -22,35 +30,20 @@
   color: $danger-color;
 }
 
-.input-container {
-  display: flex;
-  width: 100%;
-}
-
 .icon-input {
-  border-left-style: none;
-  &:focus {
-    border-left-style: none;
-  }
+  padding-left: 45px !important;
+
 }
 .icon {
-  border: 1px solid $black-color;
-  padding: 15px;
-  min-width: 15px;
-  text-align: center;
   color: $black-color;
-
-  &.icon--small {
-    font-size: 24px;
-  }
-  &.icon--medium {
-    font-size: 32px;
-  }
-  &.icon--large {
-    font-size: 40px;
-  }
+  position: absolute;
+  width:20px;
+  height:20px;
+  left: 25px;
+  z-index: 2;
+  object-fit: contain;
 }
 
-input:disabled{
+input:disabled {
   border: 1px solid gray;
 }

@@ -1,8 +1,8 @@
 import React, { FC, PropsWithChildren } from "react";
 import { InputProps } from "./Input.type";
+import "material-symbols";
 
 const Input = ({
-  iconSize = "medium",
   icon,
   type,
   value,
@@ -15,7 +15,7 @@ const Input = ({
   isReadOnly,
 }: InputProps) => {
   const Icon: FC<PropsWithChildren> = ({ children }) => (
-    <i className={`material-symbols-outlined icon icon--${iconSize} `}>
+    <i className={`material-symbols-outlined ${icon ? 'icon': ''}  `}>
       {children}
     </i>
   );
@@ -23,6 +23,7 @@ const Input = ({
   return (
     <div>
       <div className="input-container">
+        <Icon>{icon}</Icon>
         <input
           id={id}
           type={type}
