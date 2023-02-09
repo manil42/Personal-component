@@ -4,7 +4,7 @@ import { CheckboxProps } from "./Checkbox.type";
 const Checkbox = ({
   label,
   isDisabled,
-  size = "medium",
+  size = "small",
   isError,
   errorMessage,
 }: CheckboxProps) => {

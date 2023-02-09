@@ -1,28 +1,28 @@
-.input {
-  padding: 13px 15px;
-  width: 50%;
-  border-radius: 3px;
-  outline: none;
-  font-size: 32px;
-  color: $black-color;
+.input-container {
+  display: flex;
+  width: 100%;
+  z-index: 1;
+  align-items: center;
 
-  &:focus {
-    border: 1px solid $primary-color;
-  }
-  &.input--small {
-    padding: 5px 15px;
-    font-size: 24px;
-  }
-  &.input--medium {
-    padding: 10px 15px;
-    font-size: 32px;
-  }
-  &.input--large {
-    padding: 12px 15px;
-    font-size: 40px;
-  }
-  &.input--error {
-    border: 1px solid $danger-color;
+
+  & .input {
+    position: relative;
+    padding: 5px 20px;
+    width: 300px;
+    border-radius: 3px;
+    outline: none;
+    font-size: 16px;
+    height: 25px;
+    border: 1px solid black;
+    &:focus {
+      border: 1px solid $primary-color !important ;
+    }
+    &.input--error {
+      border: 1px solid $danger-color;
+      &:focus {
+        border: 1px solid $danger-color !important;
+      }
+    }
   }
 }
 
@@ -31,31 +31,20 @@
   color: $danger-color;
 }
 
-.input-container {
-  display: flex;
-  width: 100%;
-}
-
 .icon-input {
-  border-left-style: none;
-  &:focus {
-    border-left-style: none;
-  }
+  padding-left: 40px !important;
+
 }
 .icon {
-  border: 1px solid $black-color ;
-  padding: 15px;
-  min-width: 15px;
-  text-align: center;
-  color: $black-color;
+  position: absolute;
+  width:20px;
+  height:20px;
+  left: 25px;
+  z-index: 2;
+  font-size: 20px !important;
+  object-fit: contain;
+}
 
-  &.icon--small {
-    font-size: 24px;
-  }
-  &.icon--medium {
-    font-size: 32px;
-  }
-  &.icon--large {
-    font-size: 40px;
-  }
+input:disabled {
+  border: 1px solid gray !important;
 }

@@ -1,8 +1,8 @@
-import React, { FC, PropsWithChildren,  } from "react";
+import React, { FC, PropsWithChildren, useState } from "react";
 import { InputProps } from "./Input.type";
+import "material-symbols";
 
 const Input = ({
-  iconSize="medium",
   icon,
   type,
   value,
@@ -10,19 +10,23 @@ const Input = ({
   handleChange,
   errorMessage,
   id,
-  size = "medium",
   isDisabled,
   isError,
   isReadOnly,
 }: InputProps) => {
   const Icon: FC<PropsWithChildren> = ({ children }) => (
-    <i className={`material-symbols-outlined icon icon--${iconSize} `}>{children}</i>
+    <i className={`material-symbols-outlined ${icon ? 'icon': ''}  `}>
+      {children}
+    </i>
   );
+
+
 
   return (
     <div>
       <div className="input-container">
-        {icon && <Icon>{icon}</Icon>}
+        <Icon>{icon}</Icon>
+
 
         <input
           id={id}
@@ -32,12 +36,11 @@ const Input = ({
           onChange={handleChange}
           disabled={isDisabled}
           readOnly={isReadOnly}
-          className={`input input--${size} ${
-            isError ? "input--error" : "input"
-          } ${icon && "icon-input"}`}
+          className={`input ${isError ? "input--error" : "input"} ${
+            icon && "icon-input"
+          } `}
         />
       </div>
-
       {isError && <div className="error--message">{errorMessage}</div>}
     </div>
   );
