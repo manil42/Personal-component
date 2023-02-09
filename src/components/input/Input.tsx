@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren } from "react";
+import React, { FC, PropsWithChildren, useState } from "react";
 import { InputProps } from "./Input.type";
 import "material-symbols";
 
@@ -20,10 +20,14 @@ const Input = ({
     </i>
   );
 
+
+
   return (
     <div>
       <div className="input-container">
         <Icon>{icon}</Icon>
+
+
         <input
           id={id}
           type={type}

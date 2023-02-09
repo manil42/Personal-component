@@ -31,19 +31,19 @@
 }
 
 .icon-input {
-  padding-left: 45px !important;
+  padding-left: 40px !important;
 
 }
 .icon {
-  color: $black-color;
   position: absolute;
   width:20px;
   height:20px;
   left: 25px;
   z-index: 2;
+  font-size: 20px !important;
   object-fit: contain;
 }
 
 input:disabled {
-  border: 1px solid gray;
+  border: 1px solid gray !important;
 }

@@ -9,5 +9,4 @@ export interface InputProps {
   handleChange?: (e: any) => void;
   errorMessage?: string;
   icon?: string;
-  iconSize?: "small" | "medium" | "large";
 }

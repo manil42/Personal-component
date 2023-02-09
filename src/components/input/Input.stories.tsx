@@ -22,11 +22,6 @@ PlaceholderInput.args = {
     ...PlaceholderInputValues
 }
 
-export const InputSize = Template.bind({})
-
-InputSize.args = {
-    ...InputSizeValues
-}
 export const InputDisable = Template.bind({})
 
 InputDisable.args = {
