@@ -15,7 +15,7 @@ const Input = ({
   isReadOnly,
 }: InputProps) => {
   const Icon: FC<PropsWithChildren> = ({ children }) => (
-    <i className={`material-symbols-outlined ${icon ? 'icon': ''}  `}>
+    <i className={`material-symbols-outlined ${icon ? "icon" : ""}  `}>
       {children}
     </i>
   );
