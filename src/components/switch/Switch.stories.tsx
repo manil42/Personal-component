@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from "@storybook/react";
 
 import Switch from "./Switch";
 
-import { SwitchValue } from "components/__mock/SwitchValue";
+import { SwitchValue, SwitchDisable } from "components/__mock/SwitchValue";
 
 export default {
   title: "Components/Switch",
@@ -17,4 +17,10 @@ export const SwitchExample = Template.bind({});
 
 SwitchExample.args = {
   ...SwitchValue,
+};
+
+export const switchDisable = Template.bind({});
+
+switchDisable.args = {
+  ...SwitchDisable,
 };
