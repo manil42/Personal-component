@@ -2,5 +2,8 @@ export interface TableProps {
   caption?: string;
   columns: any;
   rows: any;
-  color?: "primary" | "secondary" | "success" | "danger";
+  stripe?: boolean;
+  color?: boolean;
+  border?: boolean;
+  densePadding?: boolean;
 }
