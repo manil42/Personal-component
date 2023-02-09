@@ -2,10 +2,12 @@ export interface DropdownProps {
   option: OptionTypes[];
   handleChange: (e: any) => void;
   size: "small" | "medium" | "large";
-  backgroundColor?: string;
-  color?: string;
-  hoverBackgroundColor?: string;
-  openParentColor?: string;
+  isDisabled?:boolean;
+  isError?:boolean;
+  errorMessage?:string;
+  isMultiSelect?:boolean;
+  placeholder?:string;
+  label?:string;
 }
 
 export interface OptionTypes {
@@ -13,6 +15,7 @@ export interface OptionTypes {
   name: string;
   value: string;
   avatar?: string;
+  error?: string;
 }
 
 // /**

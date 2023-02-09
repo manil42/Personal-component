@@ -1,5 +1,3 @@
-@import "../variables/variable.scss";
-
 .button-disabled {
   background-color: none !important;
 }
@@ -20,7 +18,7 @@
   position: relative;
 
   &.button-disabled {
-    cursor: not-allowed;
+    cursor: context-menu;
   }
 
   // ......theme & varient...........
@@ -32,25 +30,15 @@
 
     &.button-color-secondary {
       background-color: $secondary-color;
-
-      &.button-contained:hover,
-      &.button-contained:focus {
-        background-color: transparentize($secondary-color, $amount: 0.25);
-      }
     }
     &.button-color-sucess {
       background-color: $sucess-color;
-      &.button-contained:hover,
-      &.button-contained:focus {
-        background-color: transparentize($sucess-color, $amount: 0.25);
-      }
     }
     &.button-color-danger {
       background-color: $danger-color;
-      &.button-contained:hover,
-      &.button-contained:focus {
-        background-color: transparentize($danger-color, $amount: 0.25);
-      }
+    }
+    &.button-disabled {
+      opacity: 0.75;
     }
   }
   &.button-text {
@@ -60,24 +48,15 @@
 
     &.button-color-secondary {
       color: $secondary-color;
-      &.button-text:hover,
-      &.button-text:focus {
-        background-color: transparentize($secondary-color, $amount: 0.75);
-      }
     }
     &.button-color-sucess {
       color: $sucess-color;
-      &.button-text:hover,
-      &.button-text:focus {
-        background-color: transparentize($sucess-color, $amount: 0.75);
-      }
     }
     &.button-color-danger {
       color: $danger-color;
-      &.button-text:hover,
-      &.button-text:focus {
-        background-color: transparentize($danger-color, $amount: 0.75);
-      }
+    }
+    &.button-disabled {
+      opacity: 0.75;
     }
   }
   &.button-outlined {
@@ -89,26 +68,17 @@
     &.button-color-secondary {
       color: $secondary-color;
       border-color: $secondary-color;
-      &.button-outlined:hover,
-      &.button-outlined:focus {
-        background-color: transparentize($secondary-color, $amount: 0.75);
-      }
     }
     &.button-color-sucess {
       color: $sucess-color;
       border-color: $sucess-color;
-      &.button-outlined:hover,
-      &.button-outlined:focus {
-        background-color: transparentize($sucess-color, $amount: 0.75);
-      }
     }
     &.button-color-danger {
       color: $danger-color;
       border-color: $danger-color;
-      &.button-outlined:hover,
-      &.button-outlined:focus {
-        background-color: transparentize($danger-color, $amount: 0.75);
-      }
+    }
+    &.button-disabled {
+      opacity: 0.75;
     }
   }
   //...................size & shape................
@@ -222,14 +192,14 @@
 
 .button-contained:hover,
 .button-contained:focus {
-  background-color: transparentize($primary-color, $amount: 0.25);
+  opacity: 0.75;
 }
 .button-text:hover,
 .button-text:focus {
-  background: transparentize($primary-color, $amount: 0.75);
+  opacity: 0.75;
 }
 
 .button-outlined:hover,
 .button-outlined:focus {
-  background-color: transparentize($primary-color, $amount: 0.75);
+  opacity: 0.75;
 }
