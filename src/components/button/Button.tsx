@@ -11,7 +11,7 @@ const Button = ({
   icon,
   label,
   varient = "contained",
-  isDisabled,
+  Disabled,
   shape,
   theme,
   size = "small",
@@ -21,9 +21,9 @@ const Button = ({
       role="button"
       className={`button-component button-${varient} button-${shape} button-${size} ${
         icon && label ? `button-icon-label` : ``
-      }  button-color-${theme} ${isDisabled === true ? `button-disabled` : ``}`}
+      }  button-color-${theme} ${Disabled  ? `button-disabled` : ``}`}
       aria-label="this will take you to button"
-      disabled={isDisabled ? true : false}
+      disabled={Disabled}
     >
       {icon && <Icon>{icon ? icon : ""}</Icon>}
       {label && (
