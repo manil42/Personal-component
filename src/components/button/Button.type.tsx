@@ -1,7 +1,7 @@
 export interface ButtonProps {
   icon?: string;
   label?: string;
-  isDisabled?: boolean;
+  Disabled?: boolean;
   varient?: "text" | "contained" | "outlined";
   theme?: "primary" | "secondary" | "sucess" | "danger";
   shape?: "circle" | "square" | "rounded";
