@@ -8,6 +8,7 @@ export const Radiolabel2: RadioProps = {
   emsg: "error message",
 };
 
-export const RadioGroup: RadioProps = {
+export const RadioDisable: RadioProps = {
   label: "one",
+  Disable: true,
 };
