@@ -1,4 +1,4 @@
-import { RadioProps } from "components/Radio";
+import { RadioProps } from "components/radio";
 
 export const Radiolabel1: RadioProps = { label: "one" };
 
@@ -8,6 +8,7 @@ export const Radiolabel2: RadioProps = {
   emsg: "error message",
 };
 
-export const RadioGroup: RadioProps = {
+export const RadioDisable: RadioProps = {
   label: "one",
+  Disable: true,
 };
