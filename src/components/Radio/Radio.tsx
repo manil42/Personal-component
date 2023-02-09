@@ -1,28 +1,31 @@
 import React, { useState } from "react";
-import { RadioProps } from "./Radio.type";
+import { RadioProps } from "./index";
+//hello
 
 const Radio = ({
   label,
-  isDisabled,
+  Disable,
   theme = "primary",
   isError,
   emsg,
   value,
+  change,
 }: RadioProps) => {
   return (
     <div className={`${isError === true ? `radio--error` : ``}`}>
       <div
         className={`radio-component radio--${theme} ${
-          isDisabled === true ? `radio--disable` : ``
+          Disable === true ? `radio--disable` : ``
         }  ${isError === true ? `radio--danger` : ``} `}
       >
         <input
           type="radio"
           name="radio"
           className="radio-input"
-          disabled={isDisabled}
+          disabled={Disable}
           value={value}
           id={label}
+          onChange={change}
         />
         <label className="radio-label" htmlFor={label}>
           {label}
@@ -31,7 +34,7 @@ const Radio = ({
       {isError ? (
         <div
           className={`radio-emsg ${
-            isDisabled === true ? `radio-emsg-disable` : ``
+            Disable === true ? `radio-emsg-disable` : ``
           }`}
         >
           {emsg}

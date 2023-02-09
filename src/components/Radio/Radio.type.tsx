@@ -1,6 +1,6 @@
 export interface RadioProps {
   label?: string;
-  isDisabled?: boolean;
+  Disable?: boolean;
   theme?: "primary" | "secondary" | "danger";
   emsg?: string;
   isError?: boolean;
