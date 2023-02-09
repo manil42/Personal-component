@@ -1,4 +1,4 @@
-import { RadioProps } from "components/Radio";
+import { RadioProps } from "components/radio";
 
 export const Radiolabel1: RadioProps = { label: "one" };
 
