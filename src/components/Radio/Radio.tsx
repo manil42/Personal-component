@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RadioProps } from "./index";
+import { RadioProps } from "./Radio.type";
 //hello
 
 const Radio = ({
