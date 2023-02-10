@@ -4,7 +4,6 @@
   z-index: 1;
   align-items: center;
 
-
   & .input {
     position: relative;
     padding: 5px 20px;
@@ -29,6 +28,7 @@
 .error--message {
   margin-top: 10px;
   color: $danger-color;
+  font-size:12px;
 }
 
 .icon-input {
