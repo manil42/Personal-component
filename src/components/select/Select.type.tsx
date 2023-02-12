@@ -1,4 +1,4 @@
-export interface DropdownProps {
+export interface SelectProps {
   option: OptionTypes[];
   handleChange: (e: any) => void;
   size: "small" | "medium" | "large";

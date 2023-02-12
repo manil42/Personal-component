@@ -4,5 +4,4 @@ export interface CheckboxProps {
     size?: "small" | "medium" | "large";
     isError?: boolean;
     errorMessage?:string;
-    value?: boolean;
 }

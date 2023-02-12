@@ -9,6 +9,7 @@ const Checkbox = ({
   errorMessage,
 }: CheckboxProps) => {
   const [checked, setChecked] = useState<boolean>(false);
+
   const handleChange = () => {
     setChecked(!checked);
   };
