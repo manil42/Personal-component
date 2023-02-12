@@ -8,16 +8,13 @@ const Checkbox = ({
   isError,
   errorMessage,
 }: CheckboxProps) => {
-  const [checked, setChecked] = useState<boolean>(false)
-  const handleChange = () =>{
-    setChecked(!checked)
-
-
-    console.log(checked)
-  }
+  const [checked, setChecked] = useState<boolean>(false);
+  const handleChange = () => {
+    setChecked(!checked);
+  };
   return (
     <label htmlFor="checkbox">
-      <div className="checkbox-wrapper" > 
+      <div className="checkbox-wrapper">
         <input
           id="checkbox"
           type="checkbox"
