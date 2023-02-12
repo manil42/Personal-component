@@ -8,20 +8,30 @@ const Checkbox = ({
   isError,
   errorMessage,
 }: CheckboxProps) => {
+  const [checked, setChecked] = useState<boolean>(false)
+  const handleChange = () =>{
+    setChecked(!checked)
+
+
+    console.log(checked)
+  }
   return (
-    <div>
-      <div className="checkbox-wrapper">
+    <label htmlFor="checkbox">
+      <div className="checkbox-wrapper" > 
         <input
+          id="checkbox"
           type="checkbox"
           className={`checked checkbox--${size} ${
             isError ? "checkbox-error" : "checked"
           }`}
+          aria-checked={checked}
           disabled={isDisabled}
+          onChange={handleChange}
         />
         <span>{label}</span>
       </div>
       {isError && <div className="checkbox--message">{errorMessage}</div>}
-    </div>
+    </label>
   );
 };
 
