@@ -1,6 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Textarea from "./Textarea";
-
+import {
+  TextareaError,
+  TextareaValue,
+  TextareaExamples,
+} from "components/__mock/TextareaValues";
 export default {
   title: "Components/Textarea",
   component: Textarea,
@@ -13,5 +17,17 @@ const Template: ComponentStory<typeof Textarea> = (args: any) => (
 export const TextareaExample = Template.bind({});
 
 TextareaExample.args = {
-  label: "hello",
+  ...TextareaExamples,
+};
+
+export const TextareaWithError = Template.bind({});
+
+TextareaWithError.args = {
+  ...TextareaError,
+};
+
+export const TextareaWithValue = Template.bind({});
+
+TextareaWithValue.args = {
+  ...TextareaValue,
 };

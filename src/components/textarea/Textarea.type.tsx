@@ -8,4 +8,5 @@ export interface TextareaProps {
   value?: string;
   readonly?: boolean;
   error?: boolean;
+  onChange?: (e: any) => void;
 }

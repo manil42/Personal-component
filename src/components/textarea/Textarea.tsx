@@ -10,6 +10,7 @@ const Textarea = ({
   readonly,
   value,
   error,
+  onChange,
 }: TextareaProps) => {
   return (
     <>
@@ -29,6 +30,7 @@ const Textarea = ({
         spellCheck={spellCheck === true ? "true" : "false"}
         readOnly={readonly}
         value={value}
+        onChange={onChange}
       ></textarea>
     </>
   );
