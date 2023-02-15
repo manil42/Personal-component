@@ -5,4 +5,4 @@ export interface usePaginationRangeProps{
     currentPage:number;
 }
 
-export {}
+export {}                                                                           

@@ -7,6 +7,9 @@ const Pagination = ({
   title,
   buttonConst,
   contentPerPage,
+  isDisabled,
+  color,
+  varient,
 }: PaginationProps) => {
   const [totalPageCount] = useState(Math.ceil(data.length) / contentPerPage);
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,17 +35,17 @@ const Pagination = ({
   }
 
   return (
-    <div className="pagination">
+    <div className={`pagination ${isDisabled ? "disabled" : ""}`}>
       <button
         onClick={goToPreviousPage}
-        className={` prev ${currentPage === 1 ? "disabled" : ""}`}
+        className={`prev ${currentPage === 1 ? "disabled" : ""}`}
       >
-        {"<"}
+        <span>{"<"}</span>
       </button>
       {paginationRange.map((item: any, index: any) => {
         if (item === DOTS) {
           return (
-            <button key={index} className={`paginationItem`}>
+            <button key={index} className={`pagination-item`}>
               &#8230;
             </button>
           );
@@ -51,8 +54,8 @@ const Pagination = ({
           <button
             key={index}
             onClick={changePage}
-            className={`paginationItem ${
-              currentPage === item ? "active" : null
+            className={`${varient ? `pagination-${varient}`:'pagination-item' } ${
+              currentPage === item ? `active active-${color}` : null
             }`}
           >
             <span>{item}</span>
@@ -63,7 +66,7 @@ const Pagination = ({
         onClick={goToNextPage}
         className={`next ${currentPage === totalPageCount ? "disabled" : ""}`}
       >
-        {">"}
+        <span>{">"}</span>
       </button>
     </div>
   );
