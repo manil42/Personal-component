@@ -1,32 +1,29 @@
-//import { DropdownProps } from "../dropdown";
-import { DropdownProps } from "components/dropdown";
+//import { selectProps } from "../select";
+import { SelectProps } from "components/select";
 import { PlaceholderInput } from "components/input/Input.stories";
 
-export const DropdownValueWithIcon: DropdownProps = {
+export const selectValueWithIcon: SelectProps = {
   option: [
     {
       id: 1,
       name: "Profile",
       value: "Profile",
       avatar: "people",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 2,
       name: "Settings",
       value: "Settings",
       avatar: "settings",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 3,
       name: "Account",
       value: "Account",
       avatar: "lock",
-      error: "Error"
-
+      error: "Error",
     },
   ],
 
@@ -34,121 +31,112 @@ export const DropdownValueWithIcon: DropdownProps = {
   size: "small",
 };
 
-export const DropdownValueWithOutIcon: DropdownProps = {
+export const selectValueWithOutIcon: SelectProps = {
   option: [
     {
       id: 1,
       name: "Profile",
       value: "Profile",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 2,
       name: "Settings",
       value: "Settings",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 3,
       name: "Account",
       value: "Account",
-      error: "Error"
-
+      error: "Error",
     },
   ],
   label: "Name",
   handleChange: (e: any) => {},
   size: "small",
-  placeholder: "Placeholder"
+  placeholder: "Placeholder",
 };
 
-export const DropdownDisabledValues: DropdownProps = {
+export const selectDisabledValues: SelectProps = {
   option: [
     {
       id: 1,
       name: "Profile",
       value: "Profile",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 2,
       name: "Settings",
       value: "Settings",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 3,
       name: "Account",
       value: "Account",
-      error: "Error"
-
+      error: "Error",
     },
   ],
 
   handleChange: (e: any) => {},
   size: "small",
-  isDisabled: true
+  isDisabled: true,
 };
 
-export const DropdownErrorValues: DropdownProps = {
+export const selectErrorValues: SelectProps = {
   option: [
     {
       id: 1,
       name: "Profile",
       value: "Profile",
-      error: "Error"
+      error: "Error",
     },
     {
       id: 2,
       name: "Settings",
       value: "Settings",
-      error: "Error"
-
+      error: "Error",
     },
     {
       id: 3,
       name: "Account",
       value: "Account",
-      error: "Error"
-
+      error: "Error",
     },
   ],
 
   handleChange: (e: any) => {},
   size: "small",
   isError: true,
-  errorMessage: "This is Error Message"
+  errorMessage: "This is Error Message",
 };
 
-export const DropdownwithMultiSelectValues: DropdownProps = {
+export const selectwithMultiSelectValues: SelectProps = {
   option: [
     {
       id: 1,
       name: "Profile",
       value: "Profile",
-      error: "Error"
+      error: "Error",
     },
     {
       id: 2,
       name: "Settings",
       value: "Settings",
-      error: "Error"
+      error: "Error",
     },
     {
       id: 3,
       name: "Account",
       value: "Account",
-      error: "Error"
+      error: "Error",
     },
   ],
 
-  handleChange: (e: any) => { },
-  // size: "small",
+  handleChange: (e: any) => {},
   isMultiSelect: true,
   placeholder: "Placeholder",
-  size: "small"
+  size: "small",
 };

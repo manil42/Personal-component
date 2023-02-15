@@ -2,25 +2,81 @@
   display: flex;
   align-items: center;
 
-  & input[type="checkbox"] {
+  & input[type="checkbox"].checkbox--small {
     appearance: none;
-    width: 26px;
-    height: 26px;
+    width: 15px;
+    height: 15px;
     border-radius: 2px;
     margin-right: 7px;
     border: 1px solid $primary-color;
     outline: none;
     cursor: pointer;
+  
+    &:checked {
+      text-align: center;
+    }
+  
+    &:checked::before {
+      content: "\2714";
+      font-size: 13px;
+      color: $primary-color;
+      font-weight: 600;
+    }
   }
-  &:checked {
-    text-align: center;
+  & input[type="checkbox"].checkbox--medium {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+    margin-right: 7px;
+    border: 1px solid $primary-color;
+    outline: none;
+    cursor: pointer;
+  
+    &:checked {
+      text-align: center;
+    }
+  
+    &:checked::before {
+      content: "\2714";
+      font-size: 16px;
+      color: $primary-color;
+      font-weight: 600;
+    }
   }
-  &:checked::before {
-    content: "\2714";
-    font-size: 20px;
-    color: $primary-color;
-    font-weight: 300;
+  
+  & input[type="checkbox"].checkbox--large {
+    appearance: none;
+    width: 21px;
+    height: 21px;
+    border-radius: 2px;
+    margin-right: 7px;
+    border: 1px solid $primary-color;
+    outline: none;
+    cursor: pointer;
+  
+    &:checked {
+      text-align: center;
+    }
+  
+    &:checked::before {
+      content: "\2714";
+      font-size: 18px;
+      color: $primary-color;
+      font-weight: 600;
+    }
   }
+  & input[type="checkbox"].checkbox-error {
+    border: 1px solid $danger-color;
+  
+    &:checked::before {
+      color: $danger-color;
+    }
+    + span {
+      color: $danger-color;
+    }
+  }
+
   & :disabled {
     cursor: default !important;
     color: $gray-color;
@@ -30,87 +86,10 @@
     color: $gray-color;
   }
 }
-input[type="checkbox"].checkbox--small {
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  border-radius: 2px;
-  margin-right: 7px;
-  border: 1px solid $primary-color;
-  outline: none;
-  cursor: pointer;
-
-  &:checked {
-    text-align: center;
-  }
-
-  &:checked::before {
-    content: "\2714";
-    font-size: 13px;
-    color: $primary-color;
-    font-weight: 600;
-  }
-}
-
-input[type="checkbox"].checkbox--medium {
-  appearance: none;
-  width: 18px;
-  height: 18px;
-  border-radius: 2px;
-  margin-right: 7px;
-  border: 1px solid $primary-color;
-  outline: none;
-  cursor: pointer;
-
-  &:checked {
-    text-align: center;
-  }
-
-  &:checked::before {
-    content: "\2714";
-    font-size: 16px;
-    color: $primary-color;
-    font-weight: 600;
-  }
-}
-
-input[type="checkbox"].checkbox--large {
-  appearance: none;
-  width: 21px;
-  height: 21px;
-  border-radius: 2px;
-  margin-right: 7px;
-  border: 1px solid $primary-color;
-  outline: none;
-  cursor: pointer;
-
-  &:checked {
-    text-align: center;
-  }
-
-  &:checked::before {
-    content: "\2714";
-    font-size: 20px;
-    color: $primary-color;
-    font-weight: 600;
-  }
-}
-
-input[type="checkbox"].checkbox-error {
-  border: 1px solid $danger-color;
-
-  &:checked::before {
-    color: $danger-color;
-  }
-  + span {
-    color: $danger-color;
-  }
-}
 
 .checkbox--message{
     color: $danger-color;
     font-size: 12px;
 }
-.dropdown--options{
-  overflow: hidden;
-}
+
+

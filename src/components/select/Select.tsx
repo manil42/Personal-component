@@ -8,12 +8,10 @@ import {
   useRef,
   useState,
 } from "react";
-import { DropdownProps, OptionTypes } from "./Dropdown.type";
+import { OptionTypes, SelectProps } from "./Select.type";
 import "../../assets/styles/components/index.scss";
 
-// import "./styles.css";
 import "material-symbols";
-import { StyledDropdown } from "./StyleDropdown";
 
 const Icon: FC<PropsWithChildren> = ({ children }) => (
   <i className="material-symbols-outlined">{children}</i>
@@ -39,7 +37,7 @@ function useOnClickOutside(
   }, [ref, handler]);
 }
 
-export const Dropdown = ({
+export const Select = ({
   size = "small",
   handleChange,
   option,
@@ -49,7 +47,7 @@ export const Dropdown = ({
   errorMessage,
   placeholder,
   label,
-}: DropdownProps) => {
+}: SelectProps) => {
   const [selectedValues, setSelectedValues] = useState<string[]>([]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [value, setValue] = useState<OptionTypes>();
@@ -59,10 +57,6 @@ export const Dropdown = ({
   useEffect(() => {
     setValue(option[0]);
   }, []);
-
-  // const handleValueChange = (selectedValue: OptionTypes) => {
-  //
-  // };
 
   const handleOptionClick = (option: OptionTypes) => {
     if (isMultiSelect) {
@@ -85,12 +79,12 @@ export const Dropdown = ({
   return (
     <div
       ref={ref}
-      className={`dropdown dropdown--${size} ${isOpen ? "open" : ""} 
+      className={`select select--${size} ${isOpen ? "open" : ""} 
       `}
     >
       <button
-        className={`${isError ? "dropdown--error" : ""} ${
-          isDisabled ? "dropdown--disabled" : ""
+        className={`${isError ? "select--error" : ""} ${
+          isDisabled ? "select--disabled" : ""
         }`}
         disabled={isDisabled}
         onClick={() => setIsOpen(!isOpen)}
@@ -98,17 +92,21 @@ export const Dropdown = ({
         {!isMultiSelect && value && value.avatar && (
           <Icon>{value && isError ? value.error : value.avatar}</Icon>
         )}
-        <span className="dropdown--options">
+        <span className="select--options">
           {isMultiSelect && selectedValues
-            ? selectedValues.length > 0 ? selectedValues + " " 
-            : placeholder && <span className="dropdown--placeholder">{ placeholder }</span> : value && value.name }
+            ? selectedValues.length > 0
+              ? selectedValues + " "
+              : placeholder && (
+                  <span className="select--placeholder">{placeholder}</span>
+                )
+            : value && value.name}
         </span>
         <div className="icon--select">
           <Icon>{isOpen ? "close" : "expand_more"}</Icon>
         </div>
       </button>
       <div className="menu">
-        {option.map((item, index) => {
+        {option.map((item: any, index: any) => {
           return (
             <button
               key={index}

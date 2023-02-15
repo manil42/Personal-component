@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
-import { DropdownValueWithAvatar } from "../__mock/DropdownValue"
-import { Dropdown } from "./Dropdown"
+import { DropdownValueWithAvatar } from "../__mock/SelectValues"
+import { Dropdown } from "./Select"
 
 describe('Dropdown component',()=>{
     test("Dropdown component is render properly",()=>{
