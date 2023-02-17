@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 import { AccordionProps } from "./Accordion.type";
-import ReactDOMServer from "react-dom/server";
+import AccordionItem from "./accordionItem/AccordionItem";
 
-const Accordion = ({ title, content, openIcon, closeIcon }: AccordionProps) => {
-  const [isActive, setIsActive] = useState(false);
+const Accordion = ({ children }: AccordionProps) => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const handleAccordionClick = (index: number) => {
+    setActiveIndex((prev) => (prev === index ? null : index));
+  };
 
   return (
-    <div className={`${isActive === true ? "accordion" : `accordion-item`}`}>
-      <div
-        className={`${
-          isActive === true ? "accordion-title" : `accordionItem-title`
-        }`}
-        onClick={() => setIsActive(!isActive)}
-      >
-        <div className="title">{title}</div>
-
-        <div className="icons">{isActive ? closeIcon : openIcon}</div>
-      </div>
-      {isActive && <div className="accordion-content">{content}</div>}
+    <div>
+      {React.Children.map(children, (child, index) => {
+        if (child && child.type === AccordionItem) {
+          const isActive = activeIndex === index;
+          return React.cloneElement(child, {
+            isActive,
+            onClick: () => handleAccordionClick(index),
+          });
+        } else {
+          return child;
+        }
+      })}
     </div>
   );
 };
 
 export default Accordion;
-
-

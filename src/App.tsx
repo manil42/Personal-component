@@ -2,19 +2,36 @@ import Switch from "components/switch/Switch";
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Accordion from "components/accordion/Accordion";
-
+import AccordionItem from "components/accordion/accordionItem/AccordionItem";
+import { AccordionTitle } from "components/accordion/accordionTitle/AccordionTitle";
+import { AccordionDetail } from "components/accordion/accordionDetail/AccordionDetail";
 function App() {
-  const openIcon = React.createElement("div", { className: "open-icon" });
-  const closeIcon = React.createElement("div", { className: "close-icon" });
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleAccordionClick = (index: any) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   return (
     <div className="App">
-      <Accordion
-        title="hello"
-        content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus  "
-        openIcon={openIcon}
-        closeIcon={closeIcon}
-      />
+      <Accordion>
+        <AccordionItem isActive>
+          <AccordionTitle>hello</AccordionTitle>
+          <AccordionDetail> lorem </AccordionDetail>
+        </AccordionItem>
+        <AccordionItem isActive>
+          <AccordionTitle>Manil</AccordionTitle>
+          <AccordionDetail>Maharjan</AccordionDetail>
+        </AccordionItem>
+        <AccordionItem isActive>
+          <AccordionTitle>joel</AccordionTitle>
+          <AccordionDetail>Maharjan</AccordionDetail>
+        </AccordionItem>
+        <AccordionItem isActive>
+          <AccordionTitle>Praful</AccordionTitle>
+          <AccordionDetail>Maharjan</AccordionDetail>
+        </AccordionItem>
+      </Accordion>
     </div>
   );
 }
