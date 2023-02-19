@@ -1,6 +1,6 @@
 export interface BreadcrumbsProps{
     data:BreadcrumbsItems[]
-    seperator?: string;
+    separator?: string;
 }
 export interface BreadcrumbsItems{
     text:string;

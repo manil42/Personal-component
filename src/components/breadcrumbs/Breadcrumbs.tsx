@@ -2,7 +2,7 @@ import "material-symbols";
 import { FC, PropsWithChildren } from "react";
 import { BreadcrumbsProps } from "./Breadcrumbs.type";
 
-const Breadcrumbs = ({ data, seperator }: BreadcrumbsProps) => {
+const Breadcrumbs = ({ data, separator }: BreadcrumbsProps) => {
   const Icon: FC<PropsWithChildren> = ({ children }) => (
     <i className="material-symbols-outlined breadcrumbs-icon">{children}</i>
   );
@@ -23,7 +23,7 @@ const Breadcrumbs = ({ data, seperator }: BreadcrumbsProps) => {
                 <div className="breadcrumbs-items">
                   <span><Icon>{item.icon}</Icon></span>
                   <a href={item.url}>{item.text}</a>
-                  <span className="breadcrumb-seperator">{seperator} </span>
+                  <span className="breadcrumb-seperator">{separator} </span>
                 </div>
               )}
             </li>
