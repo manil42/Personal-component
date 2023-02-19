@@ -9,5 +9,5 @@ export const DefaultBreadcrumbsValues: BreadcrumbsProps = {
     { text: "Subcategory", url: "/category/subcategory" },
     { text: "Page", url: "/category/subcategory/page" },
   ],
-  seperator:">"
+  separator:">"
 };
