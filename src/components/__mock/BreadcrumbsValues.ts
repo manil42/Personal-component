@@ -11,3 +11,13 @@ export const DefaultBreadcrumbsValues: BreadcrumbsProps = {
   ],
   separator:">"
 };
+
+export const IconBreadcrumbsValues: BreadcrumbsProps = {
+  data: [
+    { text: "Home", url: "/", icon:"person" },
+    { text: "Category", url: "/category", icon:"category" },
+    { text: "Subcategory", url: "/category/subcategory", icon:"class" },
+    { text: "Page", url: "/category/subcategory/page", icon:"pages" },
+  ],
+  separator:">"
+};

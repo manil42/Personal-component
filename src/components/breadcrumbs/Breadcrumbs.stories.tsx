@@ -1,5 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { DefaultBreadcrumbsValues } from "components/__mock/BreadcrumbsValues";
+import { DefaultBreadcrumbsValues, IconBreadcrumbsValues } from "components/__mock/BreadcrumbsValues";
 import Breadcrumbs from "./Breadcrumbs";
 
 export default {
@@ -15,4 +15,10 @@ export const DefaultBreadcrumbs = Template.bind({});
 
 DefaultBreadcrumbs.args = {
   ...DefaultBreadcrumbsValues
+};
+
+export const IconBreadcrumbs = Template.bind({});
+
+IconBreadcrumbs.args = {
+  ...IconBreadcrumbsValues
 };
