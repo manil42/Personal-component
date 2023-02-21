@@ -5,4 +5,5 @@ export interface AvatarProps {
   variant?: "square" | "rounded";
   color?: "primary" | "secondary" | "sucess"
   children?: any;
+  badgeVarient?: "active" | "icon"
 }

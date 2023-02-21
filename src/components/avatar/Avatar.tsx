@@ -1,4 +1,3 @@
-import React from "react";
 import { AvatarProps } from "./Avatar.type";
 
 const Avatar = ({
@@ -8,16 +7,30 @@ const Avatar = ({
   variant,
   color,
   children,
+  badgeVarient,
 }: AvatarProps) => {
   return (
     <div className={`avatar ${size ? `avatar-${size}` : ""}`}>
       {imageUrl && (
-        <img
-          className={`avatar-image ${variant ? `avatar-${variant}` : ""}`}
-          src={imageUrl}
-          alt="avatar"
-        />
+        <div className="avatar-image">
+          <img
+            className={`avatar-image ${variant ? `avatar-${variant}` : ""}`}
+            src={imageUrl}
+            alt="avatar"
+            
+          />
+          {badgeVarient ? (
+              <span
+                className={`${badgeVarient ? `avatar-${badgeVarient}` : ""}  `}
+              ></span>
+            ) : (
+              ""
+            )}
+          
+        </div>
       )}
+          
+          
       {imageUrl === undefined && name !== "" && (
         <div
           className={`avatar-text ${variant ? `avatar-${variant}` : ""} ${
@@ -25,9 +38,16 @@ const Avatar = ({
           }`}
         >
           {children}
-
           {name?.split(" ")[0][0]}
           {name?.split(" ")[1][0]}
+
+          {badgeVarient ? (
+            <span
+              className={`${badgeVarient ? `avatar-${badgeVarient}` : ""}  `}
+            ></span>
+          ) : (
+            ""
+          )}
         </div>
       )}
     </div>

@@ -2,10 +2,8 @@ import { AvatarProps } from "../avatar";
 
 export const DefaultAvatarValues: AvatarProps = {
   name: "Joel Maharjan",
-  
 };
 
 export const AvatarImageValues: AvatarProps = {
-  imageUrl:
-    "https://pixabay.com/get/g57c35f5eb6da9e6d91931c1af3a1571d3775fac8f028951561d3b013cda63d16346c759e55acfc7d8ae804f9bbb5ef21.png",
-};
+  imageUrl: "https://pixabay.com/get/g47c282b92e1b17fb38f27eb2f97edfc5aa64019195d3b4ee5af5dcccea3a404f7e63a97d6cf1766180391bdfef5d66e635f4cc17d03f4692fb1519d96109a99e_1920.jpg"
+}
