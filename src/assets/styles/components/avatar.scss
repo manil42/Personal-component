@@ -2,8 +2,6 @@
   box-sizing: border-box;
   width: 30px;
   height: 30px;
-
-
   &.avatar-small {
     width: 30px;
     height: 30px;
@@ -74,7 +72,7 @@
     height: 6px;
     width: 6px;
     border-radius: 50%;
-    bottom: 2px !important;
+    bottom: 0px !important;
     right: 0px !important;
     background-color: $sucess-color;
     box-shadow: rgb(255,255,255)0px 0px 0px 2px;

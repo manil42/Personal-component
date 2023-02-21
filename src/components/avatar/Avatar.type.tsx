@@ -4,6 +4,7 @@ export interface AvatarProps {
   size?: "small" | "medium" | "large";
   variant?: "square" | "rounded";
   color?: "primary" | "secondary" | "sucess"
-  children?: any;
-  badgeVarient?: "active" | "icon"
+  children?: JSX.Element|JSX.Element[];
+  badgeVarient?: "active"
+  badgeColor?:"primary" | "secondary" | "sucess"
 }
