@@ -5,5 +5,5 @@ export const DefaultAvatarValues: AvatarProps = {
 };
 
 export const AvatarImageValues: AvatarProps = {
-  imageUrl: "https://upload.wikimedia.org/wikipedia/commons/1/17/Elon_Musk_Brazil_2022.png"
+  imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/49/Elon_Musk_2015.jpg"
 }
