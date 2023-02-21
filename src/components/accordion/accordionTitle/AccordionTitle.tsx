@@ -1,14 +1,6 @@
 import React from "react";
 import { AccordionTitleProps } from "./Accordion.type";
 
-export const AccordionTitle = ({
-  expanded,
-  handleClick,
-  children,
-}: AccordionTitleProps) => {
-  return (
-    <h2 className={` accordion-title `} onClick={() => handleClick}>
-      {children}
-    </h2>
-  );
+export const AccordionTitle = ({ children }: AccordionTitleProps) => {
+  return <p className={` accordion-title `}>{children}</p>;
 };

@@ -2,5 +2,7 @@ export interface AccordionItemProps {
   isActive: boolean;
   onClick?: (e: any) => void;
   children: React.ReactNode;
-  // id: string;
+  color?: "primary" | "secondary" | "danger" | "success";
+  margin?: boolean;
+  border?: boolean;
 }

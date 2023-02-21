@@ -21,7 +21,7 @@ const Button = ({
       role="button"
       className={`button-component button-${varient} button-${shape} button-${size} ${
         icon && label ? `button-icon-label` : ``
-      }  button-color-${theme} ${isDisabled  ? `button-disabled` : ``}`}
+      }  button-color-${theme} ${isDisabled ? `button-disabled` : ``}`}
       aria-label="this will take you to button"
       disabled={isDisabled}
     >

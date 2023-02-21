@@ -1,5 +1,4 @@
 export interface AccordionDetailProps {
-  expanded?: boolean;
-  handleClick?: (i: number) => void;
+  disable?: boolean;
   children?: React.ReactNode;
 }
