@@ -10,7 +10,7 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
 const Button = ({
   icon,
   label,
-  varient = "contained",
+  variant = "contained",
   isDisabled,
   shape,
   theme,
@@ -19,7 +19,7 @@ const Button = ({
   return (
     <button
       role="button"
-      className={`button-component button-${varient} button-${shape} button-${size} ${
+      className={`button-component button-${variant} button-${shape} button-${size} ${
         icon && label ? `button-icon-label` : ``
       }  button-color-${theme} ${isDisabled ? `button-disabled` : ``}`}
       aria-label="this will take you to button"

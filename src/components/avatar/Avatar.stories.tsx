@@ -1,6 +1,8 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Avatar from "./Avatar";
 import { AvatarImageValues, DefaultAvatarValues } from "components/__mock/AvatarValues";
+import {Home} from '@mui/icons-material';
+
 export default {
   title: "Components/Avatar",
   component: Avatar,
@@ -21,3 +23,11 @@ export const AvatarImage = Template.bind({});
 AvatarImage.args = {
   ...AvatarImageValues
 };
+
+export const AvatarCustom = Template.bind({});
+
+AvatarCustom.args ={
+    children:[
+      <Home />
+    ]
+}

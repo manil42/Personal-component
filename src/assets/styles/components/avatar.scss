@@ -7,21 +7,21 @@
     width: 30px;
     height: 30px;
     & .avatar-text {
-      font-size: 14px;
+      font-size: 14px !important;
     }
   }
   &.avatar-medium {
     width: 40px;
     height: 40px;
     & .avatar-text {
-      font-size: 16px;
+      font-size: 16px !important;
     }
   }
   &.avatar-large {
     width: 50px;
     height: 50px;
     & .avatar-text {
-      font-size: 20px;
+      font-size: 20px!important;
     }
   }
   & .avatar-image {
@@ -42,7 +42,8 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: lightblue;
+    background: $gray-color;
+    color:$white-color;
     text-transform: uppercase;
     display: flex;
     justify-content: center;
@@ -55,5 +56,17 @@
   }
   & .avatar-square {
     border-radius: 0% !important;
+  }
+  & .avatar-primary {
+    background-color: $primary-color;
+    color: $white-color;
+  }
+  & .avatar-secondary {
+    background-color: $secondary-color;
+    color: $white-color;
+  }
+  & .avatar-sucess {
+    background-color: $sucess-color;
+    color: $white-color;
   }
 }
