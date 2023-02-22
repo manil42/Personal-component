@@ -10,20 +10,62 @@ const Icon: FC<PropsWithChildren> = ({ children }) => (
 const Button = ({
   icon,
   label,
+  ariaLabel,
+  ariaDisabled,
   varient = "contained",
-  isDisabled,
+  disabled,
   shape,
   theme,
   size = "small",
+  id,
+  accesskey,
+  autofocus,
+  form,
+  formenctype,
+  formnovalidate,
+  formtarget,
+  formaction,
+  formmethod,
+  name,
+  type,
+  value,
+  style,
+  className,
+  onClick,
+  onDoubleClick,
+  onMouseDown,
+  onMouseUp,
+  onMouseEnter,
+  onMouseLeave,
+  onMouseMove,
+  onKeyDown,
+  onKeyUp,
+  onKeyPress,
+  ...props
 }: ButtonProps) => {
   return (
     <button
       role="button"
-      className={`button-component button-${varient} button-${shape} button-${size} ${
-        icon && label ? `button-icon-label` : ``
-      }  button-color-${theme} ${isDisabled ? `button-disabled` : ``}`}
-      aria-label="this will take you to button"
-      disabled={isDisabled}
+      className={`button-component button-${varient}
+       button-${shape} 
+       ${icon && label ? `button-icon-label` : ``}  
+       
+       ${icon ? `icon-${size}` : `button-${size}`}
+      button-color-${theme} 
+      ${disabled ? `button-disabled` : ``}
+         ${className}`}
+      disabled={disabled}
+      onClick={onClick}
+      onDoubleClick={onDoubleClick}
+      onMouseDown={onMouseDown}
+      onMouseUp={onMouseUp}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
+      onMouseMove={onMouseMove}
+      onKeyDown={onKeyDown}
+      onKeyUp={onKeyUp}
+      aria-disabled={ariaDisabled}
+      {...props}
     >
       {icon && <Icon>{icon ? icon : ""}</Icon>}
       {label && (
