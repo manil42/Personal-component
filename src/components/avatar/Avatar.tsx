@@ -1,6 +1,7 @@
 import { AvatarProps } from "./Avatar.type";
 
 const Avatar = ({
+  id,
   name,
   imageUrl,
   size,
@@ -9,9 +10,14 @@ const Avatar = ({
   children,
   badgeVarient,
   badgeColor,
+  src,
+  alt,
+  onClick,
+  style,
+  ...props
 }: AvatarProps) => {
   return (
-    <div className={`avatar ${size ? `avatar-${size}` : ""}`}>
+    <div className={`avatar ${size ? `avatar-${size}` : ""}`} {...props}>
       {imageUrl && (
         <div className="avatar-image">
           <img
