@@ -1,4 +1,16 @@
 @import "../variables/variable.scss";
+
+.radiogroup {
+  display: flex;
+  &.radiogroup-row {
+    flex-direction: row;
+  }
+  &.radiogroup-column {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
 input[type="radio"] {
   appearance: none;
   width: 15px;
