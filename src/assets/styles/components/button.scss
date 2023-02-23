@@ -17,6 +17,18 @@
   font-weight: 500;
   position: relative;
   text-transform: capitalize;
+  .button-label-right {
+    order: 2;
+  }
+  .button-icon-right {
+    order: 1;
+  }
+  .button-icon-left {
+    order: 2;
+  }
+  .button-label-left {
+    order: 1;
+  }
 
   &.button-disabled {
     cursor: context-menu;
@@ -128,6 +140,14 @@
       line-height: 15px;
     }
   }
+  &.icon-small {
+    padding: 10px;
+    height: 44px;
+    width: 44px;
+    .icons-size {
+      height: 25px;
+    }
+  }
 
   &.button-medium {
     font-size: 14px;
@@ -171,6 +191,15 @@
       line-height: 19px;
     }
   }
+  &.icon-medium {
+    padding: 12px;
+    height: 48px;
+    width: 48px;
+    .icons-medium {
+      height: 26px;
+    }
+  }
+
   &.button-large {
     line-height: 19px;
     font-size: 16px;
@@ -205,6 +234,14 @@
     padding: 16px;
     height: 56px;
     width: 56px;
+    .icons-size {
+      height: 25px;
+    }
+  }
+  &.button-icon-label-large {
+    width: 124px;
+    height: 40px;
+    padding: 8px 22px;
   }
 }
 

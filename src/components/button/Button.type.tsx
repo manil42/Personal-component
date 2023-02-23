@@ -1,5 +1,7 @@
 import { CSSProperties } from "styled-components";
 export interface ButtonProps {
+  iconRight?: boolean;
+  iconLeft?: boolean;
   icon?: string;
   className?: string;
   label?: string;

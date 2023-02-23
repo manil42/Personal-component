@@ -2,12 +2,17 @@ import React, { FC, PropsWithChildren } from "react";
 import { ButtonProps } from "./Button.type";
 
 const Icon: FC<PropsWithChildren> = ({ children }) => (
-  <i className="material-symbols-outlined button-icons bil-icons ">
+  <i
+    className="material-symbols-outlined button-icons bil-icons 
+  icons-large icons-medium icons-size"
+  >
     {children}
   </i>
 );
 
 const Button = ({
+  iconRight,
+  iconLeft,
   icon,
   label,
   ariaLabel,
@@ -48,9 +53,12 @@ const Button = ({
       role="button"
       className={`button-component button-${varient}
        button-${shape} 
-       ${icon && label ? `button-icon-label` : ``}  
+       ${
+         icon && label
+           ? `button-icon-label-${size}`
+           : `${icon ? `icon-${size}` : `button-${size}`}`
+       }  
        
-       ${icon ? `icon-${size}` : `button-${size}`}
       button-color-${theme} 
       ${disabled ? `button-disabled` : ``}
          ${className}`}
@@ -67,9 +75,19 @@ const Button = ({
       aria-disabled={ariaDisabled}
       {...props}
     >
-      {icon && <Icon>{icon ? icon : ""}</Icon>}
+      <div
+        className={`${iconRight ? `button-icon-right` : `button-icon-left`}`}
+      >
+        {icon && <Icon>{icon ? icon : ""}</Icon>}
+      </div>
       {label && (
-        <span className="button-span bil-span">{label ? label : ""}</span>
+        <span
+          className={`button-span bil-span ${
+            iconRight ? `button-label-right` : `button-label-left`
+          }`}
+        >
+          {label ? label : ""}
+        </span>
       )}
     </button>
   );
