@@ -3,7 +3,7 @@ import { RadioProps } from "./Radio.type";
 
 const Radio = ({
   label,
-  Disable,
+  disabled,
   theme = "primary",
   isError,
   emsg,
@@ -14,14 +14,14 @@ const Radio = ({
     <div className={`${isError === true ? `radio--error` : ``}`}>
       <div
         className={`radio-component radio--${theme} ${
-          Disable === true ? `radio--disable` : ``
+          disabled === true ? `radio--disable` : ``
         }  ${isError === true ? `radio--danger` : ``} `}
       >
         <input
           type="radio"
           name="radio"
           className="radio-input"
-          disabled={Disable}
+          disabled={disabled}
           value={value}
           id={label}
           onChange={onChange}
@@ -33,7 +33,7 @@ const Radio = ({
       {isError ? (
         <div
           className={`radio-emsg ${
-            Disable === true ? `radio-emsg-disable` : ``
+            disabled === true ? `radio-emsg-disable` : ``
           }`}
         >
           {emsg}
