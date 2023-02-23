@@ -2,12 +2,7 @@ import React, { FC, PropsWithChildren } from "react";
 import { ButtonProps } from "./Button.type";
 
 const Icon: FC<PropsWithChildren> = ({ children }) => (
-  <i
-    className="material-symbols-outlined button-icons bil-icons 
-  icons-large icons-medium icons-size"
-  >
-    {children}
-  </i>
+  <i className="material-symbols-outlined icons-size  ">{children}</i>
 );
 
 const Button = ({
@@ -56,9 +51,10 @@ const Button = ({
        ${
          icon && label
            ? `button-icon-label-${size}`
-           : `${icon ? `icon-${size}` : `button-${size}`}`
+           : `${icon ? `buttonIcon-${size}` : `button-${size}`}`
        }  
-       
+       ${iconRight?`button-iconRight`:`button-iconLeft`}
+
       button-color-${theme} 
       ${disabled ? `button-disabled` : ``}
          ${className}`}
@@ -76,7 +72,8 @@ const Button = ({
       {...props}
     >
       <div
-        className={`${iconRight ? `button-icon-right` : `button-icon-left`}`}
+        className={`${iconRight ? `button-icon-right` : `button-icon-left`}
+        icons-${size}`}
       >
         {icon && <Icon>{icon ? icon : ""}</Icon>}
       </div>
