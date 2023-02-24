@@ -1,6 +1,7 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { DefaultBreadcrumbsValues, IconBreadcrumbsValues } from "components/__mock/BreadcrumbsValues";
 import Breadcrumbs from "./Breadcrumbs";
+import BreadcrumbItem from "./breadcrumbsItems/BreadcrumbItem";
+import Home from '@mui/icons-material/';
 
 export default {
   title: "Components/Breadcrumbs",
@@ -8,17 +9,15 @@ export default {
 } as ComponentMeta<typeof Breadcrumbs>;
 
 const Template: ComponentStory<typeof Breadcrumbs> = (args: any) => (
-  <Breadcrumbs {...args} />
+  <Breadcrumbs {...args}>
+      <BreadcrumbItem to="/">Home</BreadcrumbItem>
+      <BreadcrumbItem to="/about">About</BreadcrumbItem>
+      <BreadcrumbItem>About</BreadcrumbItem>
+  </Breadcrumbs>
 );
 
 export const DefaultBreadcrumbs = Template.bind({});
 
 DefaultBreadcrumbs.args = {
-  ...DefaultBreadcrumbsValues
-};
-
-export const IconBreadcrumbs = Template.bind({});
-
-IconBreadcrumbs.args = {
-  ...IconBreadcrumbsValues
+  separator: ">"
 };

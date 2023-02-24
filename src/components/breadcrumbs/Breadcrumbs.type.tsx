@@ -1,9 +1,8 @@
+import { ReactElement } from "react";
+
 export interface BreadcrumbsProps{
-    data:BreadcrumbsItems[]
     separator?: string;
-}
-export interface BreadcrumbsItems{
-    text:string;
-    url:string;
-    icon?: string;
+    children:ReactElement[]
+    to?:string;
+    icon?:string;
 }
