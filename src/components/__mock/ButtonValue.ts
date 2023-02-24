@@ -19,6 +19,7 @@ export const ButtonLabelIcon: ButtonProps = {
 export const DisableButtonArgs: ButtonProps = {
   label: "Person",
   icon: "person",
-  variant: "contained",
-  isDisabled: true,
+  varient: "contained",
+  disabled: true,
+
 };

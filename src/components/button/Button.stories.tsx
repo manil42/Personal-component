@@ -29,3 +29,18 @@ export const DisableButton = Template.bind({});
 DisableButton.args = {
   ...DisableButtonArgs,
 };
+
+export const ButtonEventHandle = Template.bind({});
+function handleClick(event: any) {
+  console.log("Button clicked!");
+}
+ButtonEventHandle.args = {
+  label: "button",
+  onClick: handleClick,
+  onKeyPress(event) {
+    console.log("key pressed:", event.key);
+  },
+  onDoubleClick: (event) => {
+    console.log("double clicked!");
+  },
+};
