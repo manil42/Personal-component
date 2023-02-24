@@ -5,6 +5,6 @@ export interface PaginationProps{
     contentPerPage:number;
     isDisabled?:boolean;
     color?:"primary" | "secondary" | "success"
-    varient?: "outline" | "rounded" | "square"
+    variant?: "outline" | "rounded" | "square"
 }
 

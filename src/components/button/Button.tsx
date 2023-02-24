@@ -14,6 +14,7 @@ const Button = ({
   ariaDisabled,
   varient = "contained",
   disabled,
+
   shape,
   theme,
   size = "small",
@@ -70,6 +71,7 @@ const Button = ({
       onKeyUp={onKeyUp}
       aria-disabled={ariaDisabled}
       {...props}
+
     >
       <div
         className={`${iconRight ? `button-icon-right` : `button-icon-left`}
