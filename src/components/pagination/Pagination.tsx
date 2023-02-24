@@ -9,7 +9,7 @@ const Pagination = ({
   contentPerPage,
   isDisabled,
   color,
-  varient,
+  variant,
 }: PaginationProps) => {
   const [totalPageCount] = useState(Math.ceil(data.length) / contentPerPage);
   const [currentPage, setCurrentPage] = useState(1);
@@ -54,7 +54,7 @@ const Pagination = ({
           <button
             key={index}
             onClick={changePage}
-            className={`${varient ? `pagination-${varient}`:'pagination-item' } ${
+            className={`${variant ? `pagination-${variant}`:'pagination-item' } ${
               currentPage === item ? `active active-${color}` : null
             }`}
           >
