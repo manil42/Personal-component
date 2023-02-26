@@ -4,5 +4,5 @@ export interface BreadcrumbsProps{
     separator?: string;
     children:ReactElement[]
     to?:string;
-    icon?:string;
+    icon?: string;
 }

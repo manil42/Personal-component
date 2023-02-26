@@ -1,23 +1,22 @@
-import React, { ReactElement, ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { ReactElement } from "react";
 import { BreadcrumbItemProps } from "./BreadcrumbItem.type";
+import "material-symbols";
 
 const BreadcrumbItem = ({
   to,
   children,
-  separator,
-  icon
+  icon,
 }: BreadcrumbItemProps): ReactElement => {
   return to ? (
-    <>
-      {icon && <span className="icon">{children}</span>}
-      <a href={to}>{children} </a>
-      <span>{separator}</span>
-
-    </>
+    <a href={to}>
+      {icon ? <span className="breadcrumbs-icon">{icon}</span> : ""}
+      <span className={`${icon ? "breadcrumbs-list" : ""}`}>{children}</span>
+    </a>
   ) : (
-    
-    <span className="last-item">{children}</span>
+    <>
+      {icon ? <span className={`icon-active`}>{icon}</span> : ""}
+      <span className={`last-item ${icon ? "pl-25" : "last-item"}`}>{children}</span>
+    </>
   );
 };
 

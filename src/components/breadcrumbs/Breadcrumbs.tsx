@@ -1,13 +1,16 @@
-import React, { ReactElement } from "react";
+import React, { FC, PropsWithChildren, ReactElement } from "react";
 import { BreadcrumbsProps } from "./Breadcrumbs.type";
+import "material-symbols";
+
 
 const Breadcrumbs = ({
   children,
   separator,
+  icon
 }: BreadcrumbsProps): ReactElement => {
   return (
     <nav className="breadcrumbs">
-      <ol>
+      <ul>
         {React.Children.map(children, (child, index) => {
           return (
             <li>
@@ -16,7 +19,7 @@ const Breadcrumbs = ({
             </li>
           );
         })}
-      </ol>
+      </ul>
     </nav>
   );
 };
