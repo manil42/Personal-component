@@ -6,7 +6,6 @@ import "material-symbols";
 const Breadcrumbs = ({
   children,
   separator,
-  icon
 }: BreadcrumbsProps): ReactElement => {
   return (
     <nav className="breadcrumbs">
