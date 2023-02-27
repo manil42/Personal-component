@@ -1,6 +1,4 @@
 .breadcrumbs {
-  // font-size: 14px;
-
   & ul {
     list-style-type: none;
     position: relative;
@@ -11,6 +9,7 @@
   & li {
     display: inline;
     color: #768bc0;
+    margin-right: 7px;
     & .breadcrumbs-icon {
       position: absolute;
       top: -4px;
@@ -20,7 +19,6 @@
       top: -4px;
       color: $primary-color;
     }
-    
 
     & .last-item {
       padding-left: 7px;
@@ -29,29 +27,19 @@
       &.pl-25 {
         padding-left: 25px;
       }
-     
-      
     }
-  
   }
 
   & a {
     text-decoration: none;
-    padding: 7px;
     color: #768bc0;
+    padding: 5px;
   }
   & a:hover {
     text-decoration: underline;
   }
 
-  & .breadcrumb-seperator {
-    margin-left: 5px;
-    & a:hover {
-      text-decoration: none;
-    }
-  }
   & .breadcrumbs-list {
     padding-left: 25px;
   }
-
 }
