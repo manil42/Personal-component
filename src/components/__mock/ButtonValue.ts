@@ -1,7 +1,7 @@
 import { ButtonProps } from "../button";
 
 export const ButtonLabel: ButtonProps = {
-  label: "button button button",
+  label: "button",
   varient: "contained",
 };
 export const ButtonIcon: ButtonProps = {
