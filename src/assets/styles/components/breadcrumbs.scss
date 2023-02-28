@@ -1,4 +1,5 @@
 .breadcrumbs {
+
   & ul {
     list-style-type: none;
     position: relative;
@@ -9,23 +10,27 @@
   & li {
     display: inline;
     color: #768bc0;
-    margin-right: 7px;
+    margin-right: 8px;
+    font-size: 14px;
     & .breadcrumbs-icon {
       position: absolute;
-      top: -4px;
+      top: 2px;
+      font-size: 14px;
     }
     & .icon-active {
       position: absolute;
-      top: -4px;
+      top: 2px;
       color: $primary-color;
     }
-
+    & .breadcrumbs-separator{
+      margin-left:10px
+    }
     & .last-item {
-      padding-left: 7px;
+      padding-left: 8px;
       color: $primary-color;
 
-      &.pl-25 {
-        padding-left: 25px;
+      &.pl-20 {
+        padding-left: 18px;
       }
     }
   }
@@ -33,13 +38,12 @@
   & a {
     text-decoration: none;
     color: #768bc0;
-    padding: 5px;
   }
   & a:hover {
     text-decoration: underline;
   }
 
   & .breadcrumbs-list {
-    padding-left: 25px;
+    padding-left: 18px;
   }
 }

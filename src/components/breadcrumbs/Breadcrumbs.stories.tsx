@@ -25,9 +25,9 @@ DefaultBreadcrumbs.args = {
 
 const TemplateWithIcon: ComponentStory<typeof Breadcrumbs> = (args: any) => (
   <Breadcrumbs {...args}>
-      <BreadcrumbItem to="/" icon={<Home />}>Home</BreadcrumbItem>
-      <BreadcrumbItem to="/about" icon={<Info />}>About</BreadcrumbItem>
-      <BreadcrumbItem icon={<ContactPage />}>Page</BreadcrumbItem>
+      <BreadcrumbItem to="/" icon={<Home className="breadcrumbs-icon" />}>Home</BreadcrumbItem>
+      <BreadcrumbItem to="/about" icon={<Info className="breadcrumbs-icon" />}>About</BreadcrumbItem>
+      <BreadcrumbItem icon={<ContactPage className="breadcrumbs-icon" />}>Page</BreadcrumbItem>
   </Breadcrumbs>
 );
 
@@ -40,9 +40,9 @@ BreadcrumbsWithIcon.args = {
 
 const TemplateWithIconOnly: ComponentStory<typeof Breadcrumbs> = (args: any) => (
   <Breadcrumbs {...args}>
-      <BreadcrumbItem to="/" icon={<Home />}></BreadcrumbItem>
-      <BreadcrumbItem to="/about" icon={<Info />}></BreadcrumbItem>
-      <BreadcrumbItem icon={<ContactPage />}></BreadcrumbItem>
+      <BreadcrumbItem to="/" icon={<Home className="breadcrumbs-icon" />}></BreadcrumbItem>
+      <BreadcrumbItem to="/about" icon={<Info className="breadcrumbs-icon" />}></BreadcrumbItem>
+      <BreadcrumbItem icon={<ContactPage className="breadcrumbs-icon" />}></BreadcrumbItem>
   </Breadcrumbs>
 );
 
@@ -50,5 +50,5 @@ const TemplateWithIconOnly: ComponentStory<typeof Breadcrumbs> = (args: any) => 
 export const BreadcrumbsWithIconOnly = TemplateWithIconOnly.bind({});
 
 BreadcrumbsWithIconOnly.args = {
-  separator: ">"
+  separator: "/"
 };

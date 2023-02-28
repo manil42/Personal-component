@@ -7,6 +7,7 @@ const BreadcrumbItem = ({
   children,
   icon,
 }: BreadcrumbItemProps): ReactElement => {
+  
   return to ? (
     <a href={to}>
       {icon ? <span className="breadcrumbs-icon">{icon}</span> : ""}
@@ -15,7 +16,7 @@ const BreadcrumbItem = ({
   ) : (
     <>
       {icon ? <span className={`icon-active`}>{icon}</span> : ""}
-      <span className={`last-item ${icon ? "pl-25" : "last-item"}`}>{children}</span>
+      <span className={`last-item ${icon ? "pl-20" : "last-item"}`}>{children}</span>
     </>
   );
 };

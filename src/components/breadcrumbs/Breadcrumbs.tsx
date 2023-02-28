@@ -2,7 +2,6 @@ import React, { FC, PropsWithChildren, ReactElement } from "react";
 import { BreadcrumbsProps } from "./Breadcrumbs.type";
 import "material-symbols";
 
-
 const Breadcrumbs = ({
   children,
   separator,
@@ -14,7 +13,9 @@ const Breadcrumbs = ({
           return (
             <li>
               {React.cloneElement(child)}
-              {children.length - 1 != index && separator}
+              {children.length - 1 != index && (
+                <span className="breadcrumbs-separator">{separator}</span>
+              )}
             </li>
           );
         })}
