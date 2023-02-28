@@ -6,7 +6,7 @@ export interface ButtonProps {
   className?: string;
   label?: string;
   disabled?: boolean;
-  varient?: "text" | "contained" | "outlined";
+  variant?: "text" | "contained" | "outlined";
 
   theme?: "primary" | "secondary" | "sucess" | "danger";
   shape?: "circle" | "square" | "rounded";

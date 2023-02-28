@@ -7,7 +7,7 @@ const Pagination = ({
   title,
   buttonConst,
   contentPerPage,
-  isDisabled,
+  disabled,
   color,
   variant,
 }: PaginationProps) => {
@@ -35,7 +35,7 @@ const Pagination = ({
   }
 
   return (
-    <div className={`pagination ${isDisabled ? "disabled" : ""}`}>
+    <div className={`pagination ${disabled ? "disabled" : ""}`}>
       <button
         onClick={goToPreviousPage}
         className={`prev ${currentPage === 1 ? "disabled" : ""}`}

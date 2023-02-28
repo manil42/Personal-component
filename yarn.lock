@@ -1135,13 +1135,6 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@babel/runtime@^7.21.0":
-  version "7.21.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.21.0.tgz#5b55c9d394e5fcf304909a8b00c07dc217b56673"
-  integrity sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==
-  dependencies:
-    regenerator-runtime "^0.13.11"
-
 "@babel/runtime@~7.5.4":
   version "7.5.5"
   resolved "https://registry.npmjs.org/@babel/runtime/-/runtime-7.5.5.tgz"
@@ -7597,7 +7590,7 @@ flat-cache@^3.0.4:
 
 flatpickr@^4.0.6, flatpickr@^4.6.13, flatpickr@^4.6.2:
   version "4.6.13"
-  resolved "https://registry.npmjs.org/flatpickr/-/flatpickr-4.6.13.tgz"
+  resolved "https://registry.yarnpkg.com/flatpickr/-/flatpickr-4.6.13.tgz#8a029548187fd6e0d670908471e43abe9ad18d94"
   integrity sha512-97PMG/aywoYpB4IvbvUJi0RQi8vearvU0oov1WW3k0WZPBMrTQVqekSX5CjSG/M4Q3i6A/0FKXC7RyAoAUUSPw==
 
 flatted@^3.1.0:
@@ -12573,7 +12566,7 @@ react-error-overlay@^6.0.11:
 
 react-flatpickr@^3.10.13:
   version "3.10.13"
-  resolved "https://registry.npmjs.org/react-flatpickr/-/react-flatpickr-3.10.13.tgz"
+  resolved "https://registry.yarnpkg.com/react-flatpickr/-/react-flatpickr-3.10.13.tgz#5b9d8f35f84e43f342fb0f0334b78a8dcd7d67c4"
   integrity sha512-4m+K1K8jhvRFI8J/AHmQfA5hLALzhebEtEK8mLevXjX24MV3u502crzBn+EGFIBOfNUtrL5PId9FsGwgtuz/og==
   dependencies:
     flatpickr "^4.6.2"

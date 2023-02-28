@@ -2,7 +2,7 @@ export interface SelectProps {
   option: OptionTypes[];
   handleChange: (e: any) => void;
   size: "small" | "medium" | "large";
-  isDisabled?:boolean;
+  disabled?:boolean;
   isError?:boolean;
   errorMessage?:string;
   isMultiSelect?:boolean;

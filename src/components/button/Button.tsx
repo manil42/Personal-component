@@ -12,7 +12,7 @@ const Button = ({
   label,
   ariaLabel,
   ariaDisabled,
-  varient = "contained",
+  variant = "contained",
   disabled,
 
   shape,
@@ -47,7 +47,7 @@ const Button = ({
   return (
     <button
       role="button"
-      className={`button-component button-${varient}
+      className={`button-component button-${variant}
        button-${shape} 
        ${
          icon && label
