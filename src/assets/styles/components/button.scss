@@ -238,7 +238,6 @@
   }
 }
 
-
 .button-contained:hover,
 .button-contained:focus {
   opacity: 0.7;
@@ -247,17 +246,17 @@
 .button-text:focus {
   opacity: 0.75;
   &.button-color-primary {
-    background-color: rgba($primary-color, 0.03);
+    background-color: rgba($primary-color, 0.06);
   }
   &.button-color-secondary {
-    background-color: rgba($secondary-color, 0.03);
+    background-color: rgba($secondary-color, 0.06);
   }
 
   &.button-color-sucess {
-    background-color: rgba($sucess-color, 0.03);
+    background-color: rgba($sucess-color, 0.06);
   }
   &.button-color-danger {
-    background-color: rgba($danger-color, 0.03);
+    background-color: rgba($danger-color, 0.06);
   }
 }
 
@@ -265,16 +264,16 @@
 .button-outlined:focus {
   opacity: 0.75;
   &.button-color-primary {
-    background-color: rgba($primary-color, 0.03);
+    background-color: rgba($primary-color, 0.06);
   }
   &.button-color-secondary {
-    background-color: rgba($secondary-color, 0.03);
+    background-color: rgba($secondary-color, 0.06);
   }
 
   &.button-color-sucess {
-    background-color: rgba($sucess-color, 0.03);
+    background-color: rgba($sucess-color, 0.06);
   }
   &.button-color-danger {
-    background-color: rgba($danger-color, 0.03);
+    background-color: rgba($danger-color, 0.06);
   }
 }
