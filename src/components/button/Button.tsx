@@ -16,7 +16,7 @@ const Button = ({
   disabled,
 
   shape,
-  theme,
+  color,
   size = "small",
   id,
   accesskey,
@@ -56,7 +56,7 @@ const Button = ({
        }  
        ${iconRight ? `button-iconRight` : `button-iconLeft`}
 
-      button-color-${theme} 
+      button-color-${color} 
       ${disabled ? `button-disabled` : ``}
   `}
       disabled={disabled}
