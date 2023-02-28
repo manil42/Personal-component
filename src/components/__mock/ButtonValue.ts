@@ -1,19 +1,19 @@
 import { ButtonProps } from "../button";
 
 export const ButtonLabel: ButtonProps = {
-  label: "button",
-  variant: "contained",
+  label: "button button button",
+  varient: "contained",
 };
 export const ButtonIcon: ButtonProps = {
   icon: "person",
-  variant: "contained",
+  varient: "contained",
   size: "small",
 };
 
 export const ButtonLabelIcon: ButtonProps = {
   label: "Person",
   icon: "person",
-  variant: "contained",
+  varient: "contained",
 };
 
 export const DisableButtonArgs: ButtonProps = {
@@ -21,5 +21,4 @@ export const DisableButtonArgs: ButtonProps = {
   icon: "person",
   varient: "contained",
   disabled: true,
-
 };

@@ -54,11 +54,11 @@ const Button = ({
            ? `button-icon-label-${size}`
            : `${icon ? `buttonIcon-${size}` : `button-${size}`}`
        }  
-       ${iconRight?`button-iconRight`:`button-iconLeft`}
+       ${iconRight ? `button-iconRight` : `button-iconLeft`}
 
       button-color-${theme} 
       ${disabled ? `button-disabled` : ``}
-         ${className}`}
+  `}
       disabled={disabled}
       onClick={onClick}
       onDoubleClick={onDoubleClick}
@@ -71,7 +71,6 @@ const Button = ({
       onKeyUp={onKeyUp}
       aria-disabled={ariaDisabled}
       {...props}
-
     >
       <div
         className={`${iconRight ? `button-icon-right` : `button-icon-left`}
@@ -81,7 +80,7 @@ const Button = ({
       </div>
       {label && (
         <span
-          className={`button-span bil-span ${
+          className={`${
             iconRight ? `button-label-right` : `button-label-left`
           }`}
         >
