@@ -18,7 +18,6 @@ export const TooltipButton = Template.bind({});
 
 TooltipButton.args = {
   children: <Button label="button "></Button>,
-  position: "right",
   description: "click me !",
 };
 
@@ -26,6 +25,5 @@ export const TooltipHeader = Template.bind({});
 
 TooltipHeader.args = {
   children: <h2>Testing Header 2</h2>,
-  position: "right",
   description: "header 2",
 };
