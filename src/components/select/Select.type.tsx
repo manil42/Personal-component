@@ -8,6 +8,7 @@ export interface SelectProps {
   isMultiSelect?:boolean;
   placeholder?:string;
   label?:string;
+  valueSelected?:any
 }
 
 export interface OptionTypes {

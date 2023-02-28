@@ -12,9 +12,10 @@ import { OptionTypes, SelectProps } from "./Select.type";
 import "../../assets/styles/components/index.scss";
 
 import "material-symbols";
+import Checkbox from "components/checkbox/Checkbox";
 
 const Icon: FC<PropsWithChildren> = ({ children }) => (
-  <i className="material-symbols-outlined">{children}</i>
+  <i className="material-symbols-outlined select-icon">{children}</i>
 );
 
 function useOnClickOutside(
@@ -46,40 +47,57 @@ export const Select = ({
   isMultiSelect = false,
   errorMessage,
   placeholder,
+  valueSelected,
   label,
 }: SelectProps) => {
-  const [selectedValues, setSelectedValues] = useState<string[]>([]);
+  const [selectedValues, setSelectedValues] = useState<any[]>([]);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [value, setValue] = useState<OptionTypes>();
   const ref = useRef<HTMLDivElement>(null);
   useOnClickOutside(ref, () => setIsOpen(false));
 
   useEffect(() => {
-    setValue(option[0]);
-  }, []);
+    let givenValue:any;
+    if (
+      typeof valueSelected === "number" ||
+      typeof valueSelected === "string"
+    ) {
+      givenValue = option.find((item) => item.id === valueSelected);
+      setValue(()=> givenValue);
+    } else if (typeof valueSelected === "object") {
+      if (valueSelected) {
+        givenValue = option.filter((item) => {
+          return valueSelected.includes(item.id);
+        });
+        setSelectedValues(givenValue);
+      }
+    }
+  }, [valueSelected]);
 
-  const handleOptionClick = (option: OptionTypes) => {
+  const handleOptionClick = (data: OptionTypes) => {
     if (isMultiSelect) {
-      if (selectedValues.includes(option.value)) {
-        setSelectedValues(
-          selectedValues.filter((value) => value !== option.value)
+      let filteredValue = selectedValues.filter((item) => item.id === data.id);
+
+      if (filteredValue.length > 0) {
+        setSelectedValues((prevValue) =>
+          selectedValues.filter((value) => value.id !== filteredValue[0].id)
         );
-        setValue(option);
-      } else {
-        setSelectedValues([...selectedValues, option.value]);
-        setValue(option);
+      } else if (filteredValue.length == 0) {
+        setSelectedValues([...selectedValues, data]);
       }
     } else {
-      setValue(option);
-      handleChange(option);
+      setValue(data);
+      handleChange(data);
       setIsOpen(false);
     }
   };
 
   return (
-    <div
-      ref={ref}
-      className={`select select--${size} ${isOpen ? "open" : ""} 
+    <div className="select-component-wrapper">
+      {label && <div className="select-label">{label}</div>}
+      <div
+        ref={ref}
+        className={`select select--${size} ${isOpen ? "open" : ""} 
       `}
     >
       <button
@@ -89,41 +107,47 @@ export const Select = ({
         disabled={disabled}
         onClick={() => setIsOpen(!isOpen)}
       >
-        {!isMultiSelect && value && value.avatar && (
-          <Icon>{value && isError ? value.error : value.avatar}</Icon>
-        )}
-        <span className="select--options">
-          {isMultiSelect && selectedValues
-            ? selectedValues.length > 0
-              ? selectedValues + " "
-              : placeholder && (
-                  <span className="select--placeholder">{placeholder}</span>
-                )
-            : value && value.name}
-        </span>
-        <div className="icon--select">
-          <Icon>{isOpen ? "close" : "expand_more"}</Icon>
+          {/* <input type="hidden" className="select-input"  id="select-input-id" onChange={(e)=>console.log("e",e.target)}></input> */}
+      
+         
+          <span className="select--options">
+            {isMultiSelect && selectedValues
+              ? selectedValues.length > 0
+                ? selectedValues.map((item,index)=> <span key={index}>{item.name}{selectedValues.length > index+1 && ', '}</span>)
+                : placeholder && (
+                    <span className="select--placeholder">{placeholder}</span>
+                  )
+              : value && value.name}
+          </span>
+          <div className={`icon--select  ${isOpen ? "close-icon" : ""}`}>
+            <Icon>arrow_drop_down</Icon>
+          </div>
+        </button>
+        <div className="menu">
+          {option.map((item: any, index: any) => {
+            return (
+              <button
+                key={index}
+                className={`menu-option ${
+                  !isMultiSelect && value && value.name === item.name
+                    ? "active"
+                    : ""
+                }`}
+                id={`option-${item.id}`}
+                onClick={() => handleOptionClick(item)}
+              >
+                <div className="icon-option">
+                {item.avatar && <Icon>{item.avatar}</Icon>}
+                <span>{item.name}</span>
+                </div>
+               {isMultiSelect && <Checkbox checked={selectedValues.find(s_item=> s_item.name ===  item.name) ? true : false}/>} 
+             
+              </button>
+            );
+          })}
         </div>
-      </button>
-      <div className="menu">
-        {option.map((item: any, index: any) => {
-          return (
-            <button
-              key={index}
-              className={`toogle-button ${
-                isMultiSelect && selectedValues.includes(item.value)
-                  ? "active"
-                  : ""
-              }`}
-              onClick={() => handleOptionClick(item)}
-            >
-              {item.avatar && <Icon>{item.avatar}</Icon>}
-              <span>{item.name}</span>
-            </button>
-          );
-        })}
+        {isError && <div className="error--message">{errorMessage}</div>}
       </div>
-      {isError && <div className="error--message">{errorMessage}</div>}
     </div>
   );
 };
