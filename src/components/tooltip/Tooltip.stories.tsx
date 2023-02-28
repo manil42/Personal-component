@@ -18,7 +18,7 @@ const Template: ComponentStory<typeof Tooltip> = (args: any) => (
 export const TooltipButton = Template.bind({});
 
 TooltipButton.args = {
-  children: <Button label="button button button"></Button>,
+  children: <Button label="button "></Button>,
   direction: "right",
   description: "click me !",
 };
