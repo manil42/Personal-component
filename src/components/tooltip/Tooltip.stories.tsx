@@ -8,7 +8,7 @@ export default {
 } as ComponentMeta<typeof Tooltip>;
 
 const Template: ComponentStory<typeof Tooltip> = (args: any) => (
-  //
+  
   <div style={{ position: "relative", top: "12rem", left: "12rem" }}>
     <Tooltip {...args} />
   </div>
