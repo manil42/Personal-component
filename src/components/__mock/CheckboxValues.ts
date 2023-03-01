@@ -8,7 +8,7 @@ export const CheckboxWithLabelValues : CheckboxProps ={
 
 export const CheckboxDisableValues : CheckboxProps ={
     label: "Checkbox",
-    isDisabled:true,
+    disabled:true,
 }
 
 export const CheckboxSizeValues : CheckboxProps ={

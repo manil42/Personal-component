@@ -1,3 +1,4 @@
+import flatpickr from "flatpickr";
 import { InputProps } from "../input";
 
 let value = ""
@@ -23,14 +24,13 @@ export const InputSizeValues: InputProps = {
 
 export const InputDisableValues: InputProps = {
   type:"text",
-  isDisabled: true,
+  disabled: true,
   value: "Enter Text",
   handleChange:(e:any) => value = e.target.value
 
 }
 export const InputReadOnlyValues: InputProps = {
   type:"text",
-  isReadOnly: true,
   value: "Enter Text",
   handleChange:(e:any) => value = e.target.value
 
@@ -53,11 +53,27 @@ export const InputFieldWithErrorMessageValues: InputProps = {
 
 }
 
-export const InputFieldWithIconValues: InputProps = {
-  type:"text",
+export const InputFieldWithDateValues: InputProps = {
+  label:"Date:",
+  type:"date",
   value: "Hello World",
-  icon:"people",
-  handleChange:(e:any) => value = e.target.value
-
+  handleChange:(e:any) => value = e.target.value,
+  flatpickrConfig:{}
 }
 
+export const InputFieldWithDateTimeValues: InputProps = {
+  label:"DateTime Local:",
+  type:"date",
+  value: "Hello World",
+  handleChange:(e:any) => value = e.target.value,
+  flatpickrConfig:{enableTime:true}
+}
+
+
+export const InputFieldWithTimeValues: InputProps = {
+  label:"Time:",
+  type:"date",
+  value: "Hello World",
+  handleChange:(e:any) => value = e.target.value,
+  flatpickrConfig:{enableTime:true, noCalendar:true}
+}

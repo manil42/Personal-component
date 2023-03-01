@@ -41,7 +41,7 @@ export const Select = ({
   size = "small",
   handleChange,
   option,
-  isDisabled,
+  disabled,
   isError,
   isMultiSelect = false,
   errorMessage,
@@ -84,9 +84,9 @@ export const Select = ({
     >
       <button
         className={`${isError ? "select--error" : ""} ${
-          isDisabled ? "select--disabled" : ""
+          disabled ? "select--disabled" : ""
         }`}
-        disabled={isDisabled}
+        disabled={disabled}
         onClick={() => setIsOpen(!isOpen)}
       >
         {!isMultiSelect && value && value.avatar && (

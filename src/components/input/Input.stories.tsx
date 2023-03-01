@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Input from "./Input";
-import { DefaultInputValues, InputDisableValues, InputErrorValues, InputFieldWithErrorMessageValues, InputFieldWithIconValues, InputReadOnlyValues, InputSizeValues, PlaceholderInputValues } from "../__mock/InputValues";
+import { DefaultInputValues, InputDisableValues, InputErrorValues, InputFieldWithDateTimeValues, InputFieldWithDateValues, InputFieldWithErrorMessageValues, InputFieldWithTimeValues, InputReadOnlyValues, PlaceholderInputValues } from "../__mock/InputValues";
 export default {
   title: "Components/input",
   component: Input,
@@ -46,8 +46,20 @@ InputFieldWithErrorMessage.args = {
     ...InputFieldWithErrorMessageValues
 }
 
-export const InputFieldWithIcon = Template.bind({})
+export const InputFieldWithDate = Template.bind({})
 
-InputFieldWithIcon.args = {
-    ...InputFieldWithIconValues
+InputFieldWithDate.args = {
+    ...InputFieldWithDateValues
+}
+
+export const InputFieldWithDateTime = Template.bind({})
+
+InputFieldWithDateTime.args = {
+    ...InputFieldWithDateTimeValues
+}
+
+export const InputFieldWithTime = Template.bind({})
+
+InputFieldWithTime.args = {
+    ...InputFieldWithTimeValues
 }

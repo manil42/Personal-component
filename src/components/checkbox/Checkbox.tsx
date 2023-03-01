@@ -3,7 +3,7 @@ import { CheckboxProps } from "./Checkbox.type";
 
 const Checkbox = ({
   label,
-  isDisabled,
+  disabled,
   size = "small",
   isError,
   errorMessage,
@@ -23,7 +23,7 @@ const Checkbox = ({
             isError ? "checkbox-error" : "checked"
           }`}
           aria-checked={checked}
-          disabled={isDisabled}
+          disabled={disabled}
           onChange={handleChange}
         />
         <span>{label}</span>

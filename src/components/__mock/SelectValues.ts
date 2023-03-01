@@ -82,7 +82,7 @@ export const selectDisabledValues: SelectProps = {
 
   handleChange: (e: any) => {},
   size: "small",
-  isDisabled: true,
+  disabled: true,
 };
 
 export const selectErrorValues: SelectProps = {
