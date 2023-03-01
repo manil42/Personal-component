@@ -1,6 +1,13 @@
 .image-container{
     & img{
-
+        
         object-fit: cover;
+    }
+
+    & .image-rounded{
+        border-radius: 5px;
+    }
+    & .image-fullRounded{
+        border-radius: 50%;
     }
 }
