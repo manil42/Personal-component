@@ -100,15 +100,15 @@ export const Select = ({
         className={`select select--${size} ${isOpen ? "open" : ""} 
       `}
     >
-      <button
-        className={`${isError ? "select--error" : ""} ${
-          disabled ? "select--disabled" : ""
-        }`}
-        disabled={disabled}
-        onClick={() => setIsOpen(!isOpen)}
-      >
+   
           {/* <input type="hidden" className="select-input"  id="select-input-id" onChange={(e)=>console.log("e",e.target)}></input> */}
-      
+        <button
+          className={`select-element ${isError ? "select--error" : ""} ${
+            disabled ? "select--disabled" : ""
+          }`}
+          disabled={disabled}
+          onClick={() => setIsOpen(!isOpen)}
+        >
          
           <span className="select--options">
             {isMultiSelect && selectedValues
