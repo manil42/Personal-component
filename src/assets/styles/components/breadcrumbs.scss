@@ -1,0 +1,35 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 8px;
+
+  & a {
+    color: $black-color;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 4px;
+  }
+  & a:hover {
+    text-decoration: underline;
+  }
+  & .breadcrumbs-items {
+    display: flex;
+    align-items: center;
+  }
+  & .breadcrumb-seperator {
+    margin-left: 5px;
+    & a:hover {
+      text-decoration: none;
+    }
+  }
+  &.breadcrumb-item {
+    text-decoration: none;
+  }
+  & .breadcrumbs-icon {
+    font-size: 22px;
+  }
+  & .breadcrumb-active {
+    margin-left: 5px;
+  }
+}
