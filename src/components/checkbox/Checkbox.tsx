@@ -7,11 +7,12 @@ const Checkbox = ({
   size = "small",
   isError,
   errorMessage,
+  checked
 }: CheckboxProps) => {
-  const [checked, setChecked] = useState<boolean>(false);
+  const [check, setChecked] = useState<boolean>(false);
 
   const handleChange = () => {
-    setChecked(!checked);
+    setChecked(!check);
   };
   return (
     <label htmlFor="checkbox">
@@ -25,6 +26,7 @@ const Checkbox = ({
           aria-checked={checked}
           disabled={disabled}
           onChange={handleChange}
+          checked={checked}
         />
         <span>{label}</span>
       </div>

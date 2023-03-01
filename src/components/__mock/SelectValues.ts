@@ -37,25 +37,23 @@ export const selectValueWithOutIcon: SelectProps = {
       id: 1,
       name: "Profile",
       value: "Profile",
-      error: "Error",
     },
     {
       id: 2,
       name: "Settings",
       value: "Settings",
-      error: "Error",
     },
     {
       id: 3,
       name: "Account",
       value: "Account",
-      error: "Error",
     },
   ],
   label: "Name",
   handleChange: (e: any) => {},
   size: "small",
   placeholder: "Placeholder",
+  valueSelected: 3
 };
 
 export const selectDisabledValues: SelectProps = {
@@ -79,6 +77,7 @@ export const selectDisabledValues: SelectProps = {
       error: "Error",
     },
   ],
+  label: "Disable label",
 
   handleChange: (e: any) => {},
   size: "small",
@@ -139,4 +138,5 @@ export const selectwithMultiSelectValues: SelectProps = {
   isMultiSelect: true,
   placeholder: "Placeholder",
   size: "small",
+  valueSelected:[1,3]
 };
