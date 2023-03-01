@@ -3,7 +3,7 @@ export interface PaginationProps{
     title:string
     buttonConst:number;
     contentPerPage:number;
-    isDisabled?:boolean;
+    disabled?:boolean;
     color?:"primary" | "secondary" | "success"
     variant?: "outline" | "rounded" | "square"
 }

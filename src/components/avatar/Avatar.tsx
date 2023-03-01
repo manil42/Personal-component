@@ -8,7 +8,7 @@ const Avatar = ({
   variant,
   color,
   children,
-  badgeVarient,
+  badgevariant,
   badgeColor,
   src,
   alt,
@@ -25,11 +25,11 @@ const Avatar = ({
             src={imageUrl}
             alt="avatar"
           />
-          {badgeVarient ? (
+          {badgevariant ? (
             <span
               className={`${
-                badgeVarient
-                  ? `avatar-${badgeVarient} avatar-${badgeColor}`
+                badgevariant
+                  ? `avatar-${badgevariant} avatar-${badgeColor}`
                   : ""
               }`}
             ></span>
@@ -48,11 +48,11 @@ const Avatar = ({
           {children}
           {name?.split(" ")[0][0]}
           {name?.split(" ")[1][0]}
-          {badgeVarient ? (
+          {badgevariant ? (
             <span
               className={`${
-                badgeVarient
-                  ? `avatar-${badgeVarient} avatar-${badgeColor}`
+                badgevariant
+                  ? `avatar-${badgevariant} avatar-${badgeColor}`
                   : ""
               }`}
             ></span>

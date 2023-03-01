@@ -1,7 +1,5 @@
 @import "../variables/variable.scss";
-
 @import "./radio.scss";
-
 @import "./button.scss";
 @import "./select.scss";
 @import "./table.scss";
@@ -11,4 +9,12 @@
 @import "./textarea.scss";
 @import "./accordion.scss";
 @import "pagination.scss";
-@import "./avatar.scss"
+@import "./avatar.scss";
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+  }
