@@ -75,5 +75,5 @@ export const InputFieldWithTimeValues: InputProps = {
   type:"date",
   value: "Hello World",
   handleChange:(e:any) => value = e.target.value,
-  flatpickrConfig:{enableTime:true}
+  flatpickrConfig:{enableTime:true, noCalendar:true}
 }
