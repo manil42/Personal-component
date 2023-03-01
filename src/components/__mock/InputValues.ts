@@ -53,11 +53,27 @@ export const InputFieldWithErrorMessageValues: InputProps = {
 
 }
 
-export const InputFieldWithDateType: InputProps = {
+export const InputFieldWithDateValues: InputProps = {
   label:"Date:",
   type:"date",
   value: "Hello World",
   handleChange:(e:any) => value = e.target.value,
-  flatpickrConfig:{ enableTime:true, noCalendar:true ,dateFormat: "H:i"}
+  flatpickrConfig:{}
 }
 
+export const InputFieldWithDateTimeValues: InputProps = {
+  label:"DateTime Local:",
+  type:"date",
+  value: "Hello World",
+  handleChange:(e:any) => value = e.target.value,
+  flatpickrConfig:{enableTime:true}
+}
+
+
+export const InputFieldWithTimeValues: InputProps = {
+  label:"Time:",
+  type:"date",
+  value: "Hello World",
+  handleChange:(e:any) => value = e.target.value,
+  flatpickrConfig:{enableTime:true}
+}
