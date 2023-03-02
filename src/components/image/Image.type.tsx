@@ -3,7 +3,7 @@ export interface ImageProps {
   alt: string;
   width?: string;
   height?: string;
-  loading: "lazy" | "eager";
+  loading?: "lazy" | "eager";
   variant?: "rounded" | "circle" | "rectangle";
   onLoad?: () => void;
   onError?: () => void;
