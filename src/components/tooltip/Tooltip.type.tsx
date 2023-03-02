@@ -5,4 +5,5 @@ export interface TooltipProps {
   description?: any;
   color?: "dark" | "light";
   arrow?: boolean;
+  offset?: number;
 }

@@ -8,6 +8,7 @@ const Tooltip = ({
   description,
   color,
   arrow,
+  offset = 8,
 }: TooltipProps) => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [tooltipPosition, setTooltipPosition] = useState(position);
@@ -62,6 +63,7 @@ const Tooltip = ({
             className={`description ${
               arrow ? `arrow` : ``
             } description-${color}`}
+            ref={tooltipRef}
           >
             {description}
           </span>
