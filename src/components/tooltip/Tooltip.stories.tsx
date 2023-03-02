@@ -8,18 +8,17 @@ export default {
 } as ComponentMeta<typeof Tooltip>;
 
 const Template: ComponentStory<typeof Tooltip> = (args: any) => (
-  // <div style={{ position: "relative" }}>
-  <div style={{ position: "absolute", top: "100px", left: "150px" }}>
+  //
+  <div style={{ position: "relative", top: "12rem", left: "12rem" }}>
     <Tooltip {...args} />
   </div>
-  // </div>
 );
 
 export const TooltipButton = Template.bind({});
 
 TooltipButton.args = {
   children: <Button label="button "></Button>,
-  direction: "right",
+  position: "right",
   description: "click me !",
 };
 
@@ -27,6 +26,6 @@ export const TooltipHeader = Template.bind({});
 
 TooltipHeader.args = {
   children: <h2>Testing Header 2</h2>,
-  direction: "right",
+  position: "right",
   description: "header 2",
 };
