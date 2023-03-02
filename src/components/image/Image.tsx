@@ -1,10 +1,10 @@
 import React from 'react'
 import { ImageProps } from './Image.type'
 
-const Image = ({src,alt,width, height,loading, onLoad,  onError, variant}:ImageProps ) => {
+const Image = ({src,alt,width, height,loading, onLoad,  onError, className, variant, ...props}:ImageProps ) => {
   return (
     <div className='image-container'>
-      <img src={src} alt={alt} width={width} height={height}  loading={loading} className={`image ${variant ? `image-${variant}`:""}`} />
+      <img src={src} alt={alt} width={width} height={height}  loading={loading} className={`image ${variant ? `image-${variant}`:""}`} {...props}/>
     </div>
   )
 }

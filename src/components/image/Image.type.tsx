@@ -7,4 +7,5 @@ export interface ImageProps {
   variant?: "rounded" | "circle" | "rectangle";
   onLoad?: () => void;
   onError?: () => void;
+  className?:string;
 }

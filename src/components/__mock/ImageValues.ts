@@ -6,5 +6,5 @@ export const DefaultImageValues: ImageProps = {
     alt: "elon musk",
     height:"100px",
     width:"100px",
-    loading:"lazy"
+    loading:"lazy",
 }
