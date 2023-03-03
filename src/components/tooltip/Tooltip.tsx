@@ -4,38 +4,50 @@ import { TooltipProps } from "./Tooltip.type";
 const Tooltip = ({
   className,
   children,
-  position,
+  position = "left",
   description,
   color,
   arrow,
-  offset = 8,
 }: TooltipProps) => {
   const tooltipRef = useRef<HTMLDivElement>(null);
   const [tooltipPosition, setTooltipPosition] = useState(position);
+  const [winHeight, setWinHeight] = useState<any>(window.innerHeight);
+  const [winwidth, setWinWidth] = useState<any>(window.innerWidth);
 
   useEffect(() => {
     const tooltipEl = tooltipRef.current;
     if (!tooltipEl) return;
 
-    const { left, top, width, height } = tooltipEl.getBoundingClientRect();
-    const { innerWidth, innerHeight } = window;
-    let newTooltipPosition = position;
+    const updateTooltipPosition = () => {
+      let { left, top, width, height, right } =
+        tooltipEl.getBoundingClientRect();
 
-    if (position === "right" && left + width > innerWidth) {
-      newTooltipPosition = "left";
-    } else if (position === "left" && left - offset < 0) {
-      newTooltipPosition = "right";
-    } else if (position === "bottom" && top + height > innerHeight) {
-      newTooltipPosition = "top";
-    } else if (position === "top" && top - offset < 0) {
-      newTooltipPosition = "bottom";
-    }
-    setTooltipPosition(newTooltipPosition);
-  }, [description, position, offset]);
+      window.addEventListener("resize", () => {
+        setWinWidth(window.innerWidth);
+        setWinHeight(window.innerHeight);
+      });
 
-  // if(!tooltipRef) return;
+      let newTooltipPosition = position;
 
-  // const {left, top, width, height} = tooltipEl.
+      if (position === "right" && left + width > winwidth) {
+        newTooltipPosition = "left";
+      } else if (position === "left" && left - tooltipEl.offsetWidth < 0) {
+        newTooltipPosition = "right";
+      } else if (position === "bottom" && top + height > winHeight) {
+        newTooltipPosition = "top";
+      } else if (position === "top" && top - tooltipEl.offsetHeight < 0) {
+        newTooltipPosition = "bottom";
+      }
+      setTooltipPosition(newTooltipPosition);
+    };
+
+    updateTooltipPosition(); // update tooltip position on mount
+    window.addEventListener("resize", updateTooltipPosition); // add event listener for window resize
+
+    return () => {
+      window.removeEventListener("resize", updateTooltipPosition); // remove event listener on unmount
+    };
+  }, [description, position, winHeight, winwidth]);
 
   return (
     <div
@@ -43,14 +55,13 @@ const Tooltip = ({
         className && className
       }`}
     >
-      <div className="description-wrapper">
+      <div className="description-wrapper" ref={tooltipRef}>
         <div className="tooltip-inner-wrapper">
           <span>{children} </span>
           <span
             className={`description ${
               arrow ? `arrow` : ``
             } description-${color}`}
-            ref={tooltipRef}
           >
             {description}
           </span>
