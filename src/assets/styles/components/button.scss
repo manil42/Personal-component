@@ -43,6 +43,7 @@
 
     &.button-color-secondary {
       background-color: $secondary-color;
+      color: $black-color;
     }
     &.button-color-sucess {
       background-color: $sucess-color;
@@ -56,7 +57,7 @@
   }
   &.button-text {
     border-style: none;
-    background-color: white;
+    background-color: $white-color;
     color: $primary-color;
 
     &.button-color-secondary {
@@ -76,10 +77,10 @@
     color: $primary-color;
     border-color: $primary-color;
     border-width: 1px;
-    background-color: white;
+    background-color: $white-color;
 
     &.button-color-secondary {
-      color: $secondary-color;
+      color: $black-color;
       border-color: $secondary-color;
     }
     &.button-color-sucess {
@@ -239,14 +240,40 @@
 
 .button-contained:hover,
 .button-contained:focus {
-  opacity: 0.75;
+  opacity: 0.7;
 }
 .button-text:hover,
 .button-text:focus {
   opacity: 0.75;
+  &.button-color-primary {
+    background-color: rgba($primary-color, 0.06);
+  }
+  &.button-color-secondary {
+    background-color: rgba($secondary-color, 0.06);
+  }
+
+  &.button-color-sucess {
+    background-color: rgba($sucess-color, 0.06);
+  }
+  &.button-color-danger {
+    background-color: rgba($danger-color, 0.06);
+  }
 }
 
 .button-outlined:hover,
 .button-outlined:focus {
   opacity: 0.75;
+  &.button-color-primary {
+    background-color: rgba($primary-color, 0.06);
+  }
+  &.button-color-secondary {
+    background-color: rgba($secondary-color, 0.06);
+  }
+
+  &.button-color-sucess {
+    background-color: rgba($sucess-color, 0.06);
+  }
+  &.button-color-danger {
+    background-color: rgba($danger-color, 0.06);
+  }
 }
