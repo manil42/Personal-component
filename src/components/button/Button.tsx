@@ -12,11 +12,11 @@ const Button = ({
   label,
   ariaLabel,
   ariaDisabled,
-  variant = "contained",
+  varient = "contained",
   disabled,
 
   shape,
-  theme,
+  color,
   size = "small",
   id,
   accesskey,
@@ -47,18 +47,18 @@ const Button = ({
   return (
     <button
       role="button"
-      className={`button-component button-${variant}
+      className={`button-component button-${varient}
        button-${shape} 
        ${
          icon && label
            ? `button-icon-label-${size}`
            : `${icon ? `buttonIcon-${size}` : `button-${size}`}`
        }  
-       ${iconRight?`button-iconRight`:`button-iconLeft`}
+       ${iconRight ? `button-iconRight` : `button-iconLeft`}
 
-      button-color-${theme} 
+      button-color-${color} 
       ${disabled ? `button-disabled` : ``}
-         ${className}`}
+  `}
       disabled={disabled}
       onClick={onClick}
       onDoubleClick={onDoubleClick}
@@ -71,7 +71,6 @@ const Button = ({
       onKeyUp={onKeyUp}
       aria-disabled={ariaDisabled}
       {...props}
-
     >
       <div
         className={`${iconRight ? `button-icon-right` : `button-icon-left`}
@@ -81,7 +80,7 @@ const Button = ({
       </div>
       {label && (
         <span
-          className={`button-span bil-span ${
+          className={`${
             iconRight ? `button-label-right` : `button-label-left`
           }`}
         >
